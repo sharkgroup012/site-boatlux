@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
+@theme {
+  /* Navy dark palette */
+  --color-navy-950: #07091A;
+  --color-navy-900: #0A0F1E;
+  --color-navy-800: #111827;
+  --color-navy-700: #1A2540;
+  --color-navy-600: #243055;
+  --color-navy-500: #304070;
+
+  /* Gold accent palette */
+  --color-gold-300: #F2D98A;
+  --color-gold-400: #E8C96A;
+  --color-gold-500: #C9A84C;
+  --color-gold-600: #A88A35;
+  --color-gold-700: #8A6E22;
+
+  /* Cream text palette */
+  --color-cream-100: #FAF7F2;
+  --color-cream-200: #F5F0E8;
+  --color-cream-300: #E8E0D0;
+  --color-cream-400: #C8C0B0;
+  --color-cream-500: #9A9080;
+
+  /* Fonts */
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0F1E;
+  --foreground: #F5F0E8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gold divider line utility */
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #C9A84C, #E8C96A);
+}
+
+/* Subtle gold glow for cards */
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
 }
