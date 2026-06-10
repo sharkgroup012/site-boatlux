@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: "Sobre a BOATLUX® | A Maior Empresa de Cotas Náuticas do Brasil",
   description:
     "Conheça a história, missão e valores da BOATLUX®. 15 anos transformando o lazer náutico no Litoral Norte Paulista.",
+  openGraph: {
+    title: "Sobre a BOATLUX®",
+    description: "Conheça a empresa que transforma o lazer náutico no Litoral Norte Paulista há mais de 15 anos.",
+    url: "https://www.boatluxsp.com.br/sobre",
+    type: "website",
+  },
 };
 
 const values = [

@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: "Contato | BOATLUX® | Fale com um Especialista",
   description:
     "Entre em contato com a equipe BOATLUX®. Estamos prontos para apresentar as melhores opções de cotas náuticas para você.",
+  openGraph: {
+    title: "Fale com a BOATLUX®",
+    description: "Nossa equipe está pronta para apresentar as melhores opções de cotas náuticas. Consulta gratuita e sem compromisso.",
+    url: "https://www.boatluxsp.com.br/contato",
+    type: "website",
+  },
 };
 
 const contactInfo = [

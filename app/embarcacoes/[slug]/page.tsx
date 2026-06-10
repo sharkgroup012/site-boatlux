@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBoatBySlug, getBoatSlugs } from "@/lib/boats";
+import { BASE_URL } from "@/lib/constants";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,9 +16,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const boat = await getBoatBySlug(slug);
   if (!boat) return { title: "Embarcação não encontrada | BOATLUX®" };
+
+  const pageUrl = `${BASE_URL}/embarcacoes/${slug}`;
+  const ogImage = boat.images[0]
+    ? { url: boat.images[0], width: 1200, height: 630, alt: boat.name }
+    : undefined;
+
   return {
     title: `${boat.name} | BOATLUX® Cotas Náuticas`,
     description: boat.description,
+    openGraph: {
+      title: `${boat.name} | Cota Náutica`,
+      description: boat.description,
+      url: pageUrl,
+      type: "website",
+      images: ogImage ? [ogImage] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${boat.name} | BOATLUX®`,
+      description: boat.description,
+      images: ogImage ? [ogImage.url] : undefined,
+    },
   };
 }
 

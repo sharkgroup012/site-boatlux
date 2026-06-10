@@ -6,6 +6,12 @@ import BoatsGrid from "@/components/BoatsGrid";
 export const metadata: Metadata = {
   title: "Cotas Disponíveis | BOATLUX® | Lanchas e Jet Skis",
   description: "Confira as cotas náuticas disponíveis na BOATLUX®. Lanchas e jet skis de alto padrão no Litoral Norte Paulista.",
+  openGraph: {
+    title: "Cotas Disponíveis | BOATLUX®",
+    description: "Lanchas e jet skis de alto padrão no Litoral Norte Paulista. Veja as cotas disponíveis agora.",
+    url: "https://www.boatluxsp.com.br/cotas",
+    type: "website",
+  },
 };
 
 export const dynamic = "force-dynamic";

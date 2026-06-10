@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+import { BASE_URL, OG_DEFAULT } from "@/lib/constants";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -21,12 +22,23 @@ export const metadata: Metadata = {
   description:
     "A maior empresa de cotas náuticas do Brasil. Navegue com exclusividade em Ubatuba, Caraguatatuba, São Sebastião e Ilhabela sem os custos de ser dono.",
   keywords: "cotas náuticas, lancha, jet ski, litoral norte sp, ubatuba, boatlux",
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     title: "BOATLUX® | Cotas Náuticas | Litoral Norte SP",
     description:
-      "A maior empresa de cotas náuticas do Brasil. Mais de 300 embarcações e 2.000 cotistas.",
+      "A maior empresa de cotas náuticas do Brasil. Navegue com exclusividade no Litoral Norte Paulista sem os custos de ser dono.",
+    url: BASE_URL,
+    siteName: "BOATLUX®",
     type: "website",
     locale: "pt_BR",
+    images: [OG_DEFAULT],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BOATLUX® | Cotas Náuticas | Litoral Norte SP",
+    description:
+      "A maior empresa de cotas náuticas do Brasil. Navegue com exclusividade no Litoral Norte Paulista.",
+    images: [OG_DEFAULT.url],
   },
 };
 
