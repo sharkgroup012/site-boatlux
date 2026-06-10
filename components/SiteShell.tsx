@@ -8,8 +8,9 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 export default function SiteShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAdmin = pathname.startsWith("/admin");
+  const isLP = pathname.startsWith("/lp");
 
-  if (isAdmin) return <>{children}</>;
+  if (isAdmin || isLP) return <>{children}</>;
 
   return (
     <>
