@@ -103,8 +103,9 @@ export default function Navbar() {
           ) : (
             <Link
               href="/admin/login"
-              className="text-xs text-cream-600 hover:text-cream-400 transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs text-cream-400 hover:text-gold-400 border border-cream-400/20 hover:border-gold-400/40 px-3 py-1.5 rounded-full transition-colors"
             >
+              <LockIcon />
               Área Restrita
             </Link>
           )}
@@ -174,6 +175,14 @@ export default function Navbar() {
         </div>
       )}
     </header>
+  );
+}
+
+function LockIcon() {
+  return (
+    <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+    </svg>
   );
 }
 
