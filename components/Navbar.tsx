@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { createSupabaseBrowser } from "@/lib/supabase";
 
 const navLinks = [
   { href: "/", label: "Início" },
@@ -15,7 +16,9 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const isHome = pathname === "/";
 
   useEffect(() => {
@@ -23,6 +26,22 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const supabase = createSupabaseBrowser();
+    supabase.auth.getUser().then(({ data }) => setIsAdmin(!!data.user));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
+      setIsAdmin(!!session?.user);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
+  async function handleLogout() {
+    const supabase = createSupabaseBrowser();
+    await supabase.auth.signOut();
+    setIsAdmin(false);
+    router.refresh();
+  }
 
   const isTransparent = isHome && !scrolled && !menuOpen;
 
@@ -64,8 +83,31 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA button */}
-        <div className="hidden md:flex items-center">
+        {/* CTA + admin */}
+        <div className="hidden md:flex items-center gap-3">
+          {isAdmin ? (
+            <>
+              <Link
+                href="/admin"
+                className="text-xs text-gold-500 hover:text-gold-400 font-medium transition-colors"
+              >
+                Painel Admin
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="text-xs text-cream-500 hover:text-red-400 transition-colors"
+              >
+                Sair
+              </button>
+            </>
+          ) : (
+            <Link
+              href="/admin/login"
+              className="text-xs text-cream-600 hover:text-cream-400 transition-colors"
+            >
+              Área Restrita
+            </Link>
+          )}
           <a
             href="https://wa.me/5512996010000?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais+sobre+as+cotas."
             target="_blank"
@@ -111,6 +153,24 @@ export default function Navbar() {
             <WhatsAppIcon className="w-5 h-5" />
             Falar com Especialista
           </a>
+          {isAdmin ? (
+            <div className="flex items-center justify-between pt-2">
+              <Link href="/admin" onClick={() => setMenuOpen(false)} className="text-xs text-gold-500 font-medium">
+                Painel Admin
+              </Link>
+              <button onClick={handleLogout} className="text-xs text-cream-500 hover:text-red-400 transition-colors">
+                Sair
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/admin/login"
+              onClick={() => setMenuOpen(false)}
+              className="block text-center text-xs text-cream-600 hover:text-cream-400 pt-2 transition-colors"
+            >
+              Área Restrita
+            </Link>
+          )}
         </div>
       )}
     </header>
