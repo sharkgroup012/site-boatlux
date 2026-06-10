@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -10,10 +11,13 @@ export default function LPLayout({ children }: { children: React.ReactNode }) {
       {/* LP Header — sem links de navegação */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-navy-950/95 backdrop-blur-sm border-b border-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <span className="font-display text-xl font-bold text-cream-100 tracking-wider">
-            BOAT<span className="text-gold-500">LUX</span>
-            <span className="text-gold-500 text-sm align-super">®</span>
-          </span>
+          <Image
+            src="/images/logo_white.png"
+            alt="BOATLUX®"
+            width={150}
+            height={50}
+            className="h-10 w-auto object-contain"
+          />
           <a
             href="https://wa.me/5512996010000"
             target="_blank"
