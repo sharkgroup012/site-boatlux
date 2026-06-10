@@ -29,8 +29,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const supabase = createSupabaseBrowser();
-    supabase.auth.getUser().then(({ data }) => setIsAdmin(!!data.user));
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, session) => {
+    supabase.auth.getUser().then(({ data }: { data: { user: unknown } }) => setIsAdmin(!!data.user));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: string, session: { user?: unknown } | null) => {
       setIsAdmin(!!session?.user);
     });
     return () => subscription.unsubscribe();
