@@ -54,17 +54,8 @@ export default function LPLeadForm() {
         </div>
         <h3 className="font-display text-xl text-cream-200">Mensagem enviada!</h3>
         <p className="text-cream-400 text-sm">
-          Nossa equipe entrará em contato em breve. Ou, se preferir, fale agora
-          pelo WhatsApp.
+          Nossa equipe entrará em contato em breve.
         </p>
-        <a
-          href="https://wa.me/5512996010000"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-full text-sm hover:bg-[#20b85a] transition-colors"
-        >
-          Abrir WhatsApp
-        </a>
       </div>
     );
   }
@@ -189,8 +180,8 @@ export default function LPLeadForm() {
 
       {state === "error" && (
         <p className="text-red-400 text-sm">
-          Erro ao enviar. Tente pelo WhatsApp:{" "}
-          <a href="https://wa.me/5512996010000" className="underline">
+          Erro ao enviar. Tente novamente ou ligue para{" "}
+          <a href="tel:+5512996010000" className="underline">
             (12) 99601-0000
           </a>
         </p>
