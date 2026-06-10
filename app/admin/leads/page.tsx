@@ -75,11 +75,11 @@ export default async function LeadsPage() {
                           {lead.email}
                         </a>
                       ) : (
-                        <span className="text-gray-600">—</span>
+                        <span className="text-gray-600">-</span>
                       )}
                     </td>
                     <td className="px-6 py-4 text-gray-400 max-w-xs truncate">
-                      {lead.message || <span className="text-gray-600">—</span>}
+                      {lead.message || <span className="text-gray-600">-</span>}
                     </td>
                     <td className="px-6 py-4">
                       <span className="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded-full">

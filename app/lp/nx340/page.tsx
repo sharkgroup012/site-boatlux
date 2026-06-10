@@ -3,7 +3,7 @@ import Image from "next/image";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "NX 340 Sport Coupé — Cota Náutica Exclusiva | BOATLUX®",
+  title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
   description:
     "Tenha acesso a uma das embarcações mais sofisticadas do Litoral Norte Paulista. Cotas disponíveis com tudo incluído. Consulte agora.",
 };
@@ -104,7 +104,7 @@ const TESTIMONIALS = [
 const FAQ = [
   {
     q: "O que é exatamente uma cota náutica?",
-    a: "Uma cota náutica é a aquisição de uma fração de uma embarcação. Você tem direito de uso garantido por contrato, sem precisar arcar com todos os custos de propriedade integral — como seguro, manutenção, marinheiro e guarda.",
+    a: "Uma cota náutica é a aquisição de uma fração de uma embarcação. Você tem direito de uso garantido por contrato, sem precisar arcar com todos os custos de propriedade integral: seguro, manutenção, marinheiro e guarda.",
   },
   {
     q: "Quantos dias por mês posso usar a embarcação?",
@@ -181,7 +181,7 @@ export default function LPNx340Page() {
               </p>
               <p className="text-cream-400 text-lg leading-relaxed mb-8 max-w-lg">
                 Tenha acesso a uma das embarcações mais sofisticadas do litoral
-                paulista, pagando uma fração do valor — com tudo incluído e zero
+                paulista, pagando uma fração do valor, com tudo incluído e zero
                 preocupação.
               </p>
 
@@ -233,7 +233,7 @@ export default function LPNx340Page() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                 <Image
                   src={BOAT.images.gallery1}
-                  alt={`${BOAT.name} — visão lateral`}
+                  alt={`${BOAT.name} visão lateral`}
                   fill
                   className="object-cover"
                 />
@@ -242,7 +242,7 @@ export default function LPNx340Page() {
               <div className="absolute -bottom-6 -right-6 w-48 h-32 rounded-xl overflow-hidden border-2 border-navy-700 hidden md:block">
                 <Image
                   src={BOAT.images.interior}
-                  alt={`${BOAT.name} — interior`}
+                  alt={`${BOAT.name} interior`}
                   fill
                   className="object-cover"
                 />
@@ -308,7 +308,7 @@ export default function LPNx340Page() {
               <div key={i} className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
                   src={src}
-                  alt={`${BOAT.name} — foto ${i + 1}`}
+                  alt={`${BOAT.name} foto ${i + 1}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -348,7 +348,7 @@ export default function LPNx340Page() {
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
                 src={BOAT.images.interior}
-                alt={`${BOAT.name} — interior luxuoso`}
+                alt={`${BOAT.name} interior luxuoso`}
                 fill
                 className="object-cover"
               />
