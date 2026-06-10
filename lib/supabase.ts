@@ -1,10 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
+// Shared types
 export type Lead = {
   id?: string;
   name: string;
@@ -15,21 +11,53 @@ export type Lead = {
   created_at?: string;
 };
 
-/* SQL schema to run in Supabase:
+export type Boat = {
+  id?: string;
+  name: string;
+  slug: string;
+  type: "lancha" | "jet";
+  brand?: string;
+  model?: string;
+  year?: number;
+  length?: string;
+  capacity?: string;
+  engine?: string;
+  power?: string;
+  max_speed?: string;
+  fuel?: "gasolina" | "diesel" | "flex";
+  quota_price?: number;
+  quota_available?: number;
+  location?: string;
+  description?: string;
+  images?: string[];
+  available?: boolean;
+  featured?: boolean;
+  display_order?: number;
+  active?: boolean;
+  created_at?: string;
+  updated_at?: string;
+};
 
-create table leads (
-  id uuid primary key default gen_random_uuid(),
-  name text not null,
-  phone text not null,
-  email text,
-  message text,
-  source text default 'website',
-  created_at timestamptz default now()
+// Browser client (safe for client components)
+export function createSupabaseBrowser() {
+  const { createBrowserClient } = require("@supabase/ssr");
+  return createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+}
+
+// Admin client with service role (server only)
+export function createSupabaseAdmin() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    { auth: { autoRefreshToken: false, persistSession: false } }
+  );
+}
+
+// Legacy browser client
+export const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
-
-alter table leads enable row level security;
-
-create policy "Service role can manage leads"
-  on leads for all
-  using (auth.role() = 'service_role');
-*/

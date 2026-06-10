@@ -15,7 +15,7 @@ export default function PoliticaPage() {
           <p>
             A BOATLUX® respeita a privacidade de seus usuários e está comprometida
             com a proteção dos dados pessoais coletados em nosso site, em
-            conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº
+            conformidade com a Lei Geral de Proteção de Dados (LGPD, Lei nº
             13.709/2018).
           </p>
           <h2 className="font-display text-2xl font-semibold text-cream-100 mt-8">

@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBoatBySlug, boats } from "@/lib/boats";
+import { getBoatBySlug, getBoatSlugs } from "@/lib/boats";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return boats.map((b) => ({ slug: b.slug }));
+  const slugs = await getBoatSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const boat = getBoatBySlug(slug);
+  const boat = await getBoatBySlug(slug);
   if (!boat) return { title: "Embarcação não encontrada | BOATLUX®" };
   return {
     title: `${boat.name} | BOATLUX® Cotas Náuticas`,
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EmbarcacaoPage({ params }: Props) {
   const { slug } = await params;
-  const boat = getBoatBySlug(slug);
+  const boat = await getBoatBySlug(slug);
   if (!boat) notFound();
 
   const specEntries = Object.entries(boat.specs).filter(([, v]) => v);
@@ -74,9 +75,7 @@ export default async function EmbarcacaoPage({ params }: Props) {
             <h1 className="font-display text-4xl md:text-6xl font-bold text-cream-100">
               {boat.name}
             </h1>
-            <p className="text-cream-400 mt-1 flex items-center gap-1">
-              📍 {boat.location}
-            </p>
+            <p className="text-cream-400 mt-1">{boat.location}</p>
           </div>
         </div>
       </section>
@@ -130,7 +129,7 @@ export default async function EmbarcacaoPage({ params }: Props) {
                       >
                         <Image
                           src={img}
-                          alt={`${boat.name} — foto ${i + 2}`}
+                          alt={`${boat.name} foto ${i + 2}`}
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -173,7 +172,7 @@ export default async function EmbarcacaoPage({ params }: Props) {
                   <h3 className="font-display text-2xl font-semibold text-cream-100">
                     {boat.name}
                   </h3>
-                  <p className="text-cream-500 text-sm mt-1">📍 {boat.location}</p>
+                  <p className="text-cream-500 text-sm mt-1">{boat.location}</p>
                 </div>
 
                 <div className="gold-line" />

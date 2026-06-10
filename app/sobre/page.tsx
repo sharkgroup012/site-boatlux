@@ -10,22 +10,22 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    icon: "🏆",
+    numeral: "I",
     title: "Excelência",
     desc: "Frota premium sempre mantida com os mais altos padrões de qualidade e segurança.",
   },
   {
-    icon: "🤝",
+    numeral: "II",
     title: "Transparência",
     desc: "Contratos claros, sem letras miúdas. Você sabe exatamente o que está adquirindo.",
   },
   {
-    icon: "🌊",
+    numeral: "III",
     title: "Paixão pelo mar",
     desc: "Cada detalhe pensado para que sua experiência náutica seja inesquecível.",
   },
   {
-    icon: "💡",
+    numeral: "IV",
     title: "Inovação",
     desc: "Sistema de reservas digital, app próprio e tecnologia a favor do seu lazer.",
   },
@@ -78,7 +78,7 @@ export default function SobrePage() {
                 Hoje somos a maior empresa de cotas náuticas do Brasil, com mais
                 de <strong className="text-cream-200">300 embarcações</strong>,{" "}
                 <strong className="text-cream-200">2.000 cotistas</strong> e
-                presença em quatro cidades do Litoral Norte Paulista — Ubatuba,
+                presença em quatro cidades do Litoral Norte Paulista: Ubatuba,
                 Caraguatatuba, São Sebastião e Ilhabela.
               </p>
               <p className="text-cream-400 leading-relaxed">
@@ -90,7 +90,7 @@ export default function SobrePage() {
             <div className="relative aspect-video rounded-2xl overflow-hidden ring-1 ring-navy-700 shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/jk1ZqiTvHoo?si=t72OxfzuhMW69vVI"
-                title="BOATLUX® — Nossa História"
+                title="BOATLUX® Nossa História"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
@@ -115,9 +115,10 @@ export default function SobrePage() {
             {values.map((v) => (
               <div
                 key={v.title}
-                className="bg-navy-800 border border-navy-700 rounded-xl p-6 text-center hover:border-gold-500/30 transition-colors group"
+                className="bg-navy-800 border border-navy-700 rounded-xl p-6 hover:border-gold-500/30 transition-colors group"
               >
-                <span className="text-4xl mb-4 block">{v.icon}</span>
+                <p className="font-display text-2xl font-bold text-gold-600 mb-3">{v.numeral}</p>
+                <div className="w-6 h-px bg-gold-600 mb-4" />
                 <h3 className="font-display text-lg font-semibold text-cream-100 mb-2 group-hover:text-gold-400 transition-colors">
                   {v.title}
                 </h3>
@@ -145,9 +146,7 @@ export default function SobrePage() {
                 key={loc.city}
                 className="bg-navy-900 border border-navy-700 rounded-xl p-6 hover:border-gold-500/30 transition-colors"
               >
-                <p className="text-gold-500 text-xs font-semibold uppercase tracking-widest mb-2">
-                  📍
-                </p>
+                <div className="w-5 h-px bg-gold-600 mb-3" />
                 <h3 className="font-display text-xl font-semibold text-cream-100 mb-2">
                   {loc.city}
                 </h3>

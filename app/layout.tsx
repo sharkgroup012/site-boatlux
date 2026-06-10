@@ -19,12 +19,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "BOATLUX® — Cotas Náuticas | Litoral Norte SP",
+  title: "BOATLUX® | Cotas Náuticas | Litoral Norte SP",
   description:
     "A maior empresa de cotas náuticas do Brasil. Navegue com exclusividade em Ubatuba, Caraguatatuba, São Sebastião e Ilhabela sem os custos de ser dono.",
   keywords: "cotas náuticas, lancha, jet ski, litoral norte sp, ubatuba, boatlux",
   openGraph: {
-    title: "BOATLUX® — Cotas Náuticas | Litoral Norte SP",
+    title: "BOATLUX® | Cotas Náuticas | Litoral Norte SP",
     description:
       "A maior empresa de cotas náuticas do Brasil. Mais de 300 embarcações e 2.000 cotistas.",
     type: "website",

@@ -4,40 +4,40 @@ import LeadForm from "@/components/LeadForm";
 import { getFeaturedBoats } from "@/lib/boats";
 
 const stats = [
-  { value: "300+", label: "Embarcações" },
-  { value: "2.000+", label: "Cotistas" },
-  { value: "15+", label: "Anos de experiência" },
-  { value: "4", label: "Cidades no litoral" },
+  { value: "300+", label: "Embarcações", sub: "Lanchas e jet skis de alto padrão" },
+  { value: "2.000+", label: "Cotistas", sub: "Voando regularmente pelo litoral" },
+  { value: "15+", label: "Anos", sub: "Liderando o mercado náutico nacional" },
+  { value: "4", label: "Cidades", sub: "Ubatuba, Caraguatatuba, São Sebastião, Ilhabela" },
 ];
 
 const benefits = [
   {
-    icon: "🌎",
-    title: "GNU — Use em todo o Brasil",
+    number: "01",
+    title: "GNU: Use em todo o Brasil",
     desc: "Navegue em qualquer lugar do país. O Grupo Nacional de Utilização é exclusividade BOATLUX®.",
   },
   {
-    icon: "🔧",
+    number: "02",
     title: "Manutenção incluída",
     desc: "Todos os custos de manutenção preventiva e corretiva estão cobertos na sua cota.",
   },
   {
-    icon: "✨",
+    number: "03",
     title: "Limpeza completa",
     desc: "Checkup e limpeza profissional antes e depois de cada uso. Embarcação sempre perfeita.",
   },
   {
-    icon: "🛡️",
+    number: "04",
     title: "Seguro total",
     desc: "Cobertura completa de seguro para a embarcação e tripulantes inclusa.",
   },
   {
-    icon: "💰",
+    number: "05",
     title: "Sem custos fixos",
     desc: "Pague somente pela cota. Sem IPVA náutico, vaga de marina ou outros custos ocultos.",
   },
   {
-    icon: "📱",
+    number: "06",
     title: "Reserva pelo app",
     desc: "Agendamento simples e rápido pelo aplicativo. Disponibilidade em tempo real.",
   },
@@ -64,26 +64,23 @@ const steps = [
 const testimonials = [
   {
     name: "Roberto M.",
-    location: "São Paulo",
-    text: "A melhor decisão que tomei. Navego todo fim de semana em Ubatuba sem me preocupar com nada. A BOATLUX® cuida de tudo.",
-    rating: 5,
+    since: "Cotista BOATLUX® desde 2019",
+    text: "Antes de conhecer a BOATLUX®, passei anos pensando em comprar uma lancha própria. Quando calculei os custos reais de manutenção, seguro, marinheiro e vaga de marina, percebi que nunca valia a pena. Hoje tenho minha cota há cinco anos, navego todos os fins de semana em Ubatuba e não me preocupo com absolutamente nada. A equipe cuida de tudo.",
   },
   {
     name: "Ana C.",
-    location: "Campinas",
-    text: "Comprei uma cota na lancha e minha família ficou apaixonada. Ilhabela toda semana! Vale cada centavo.",
-    rating: 5,
+    since: "Cotista BOATLUX® desde 2021",
+    text: "Meu marido e eu compramos uma cota como presente de aniversário de casamento. Em dois anos, já levamos nossa família para Ilhabela mais de quarenta vezes. A lancha está sempre impecável, a reserva é simples pelo aplicativo e o atendimento é excelente. Difícil imaginar os verões sem a BOATLUX®.",
   },
   {
     name: "Carlos F.",
-    location: "São José dos Campos",
-    text: "Já tentei comprar lancha própria antes e o custo era absurdo. A cota náutica resolveu tudo com um décimo do valor.",
-    rating: 5,
+    since: "Cotista BOATLUX® desde 2020",
+    text: "Pesquisei muito antes de fechar. Cheguei a dar entrada em uma lancha própria e desisti quando vi os custos anuais. Com a cota, pago uma fração disso e tenho disponibilidade real nos fins de semana. O sistema GNU também foi decisivo: já usei embarcações em outros estados durante viagens.",
   },
 ];
 
-export default function HomePage() {
-  const featuredBoats = getFeaturedBoats();
+export default async function HomePage() {
+  const featuredBoats = await getFeaturedBoats();
 
   return (
     <>
@@ -103,14 +100,13 @@ export default function HomePage() {
             Maior empresa de cotas náuticas do Brasil
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-bold text-cream-100 leading-tight mb-6">
-            Seu Sonho de{" "}
-            <span className="text-gold-400">Navegar</span>
+            O mar te espera.
             <br />
-            Começa Aqui
+            <span className="text-gold-400">Navegue agora.</span>
           </h1>
           <p className="text-cream-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            Adquira sua cota náutica e navegue com exclusividade no Litoral
-            Norte Paulista — sem os altos custos de ser dono de uma embarcação.
+            A maior empresa de cotas náuticas do Brasil. Mais de 300
+            embarcações disponíveis no Litoral Norte Paulista.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -142,11 +138,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-navy-700">
             {stats.map((stat) => (
-              <div key={stat.label} className="py-8 text-center px-4">
+              <div key={stat.label} className="py-10 text-center px-4">
                 <p className="font-display text-3xl md:text-4xl font-bold text-gold-500 mb-1">
                   {stat.value}
                 </p>
-                <p className="text-cream-400 text-sm">{stat.label}</p>
+                <p className="text-cream-200 text-sm font-medium mb-1">{stat.label}</p>
+                <div className="w-8 h-px bg-gold-700 mx-auto mb-2" />
+                <p className="text-cream-500 text-xs leading-relaxed">{stat.sub}</p>
               </div>
             ))}
           </div>
@@ -160,7 +158,7 @@ export default function HomePage() {
             <div className="relative aspect-video rounded-2xl overflow-hidden ring-1 ring-navy-700 shadow-2xl">
               <iframe
                 src="https://www.youtube.com/embed/jk1ZqiTvHoo?si=t72OxfzuhMW69vVI"
-                title="BOATLUX® — O que é uma Cota Náutica?"
+                title="BOATLUX® O que é uma Cota Náutica?"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
@@ -179,7 +177,7 @@ export default function HomePage() {
               <p className="text-cream-400 leading-relaxed">
                 O sistema de cotas permite que você tenha todos os benefícios de
                 possuir uma lancha ou jet ski, pagando apenas uma fração do
-                valor. A BOATLUX® cuida de tudo — manutenção, limpeza, seguro e
+                valor. A BOATLUX® cuida de tudo: manutenção, limpeza, seguro e
                 documentação.
               </p>
               <p className="text-cream-400 leading-relaxed">
@@ -244,7 +242,7 @@ export default function HomePage() {
                   <h3 className="font-display text-xl font-semibold text-cream-100 mb-1 group-hover:text-gold-400 transition-colors">
                     {boat.name}
                   </h3>
-                  <p className="text-cream-500 text-xs mb-3">📍 {boat.location}</p>
+                  <p className="text-cream-500 text-xs mb-3">{boat.location}</p>
                   <p className="text-cream-400 text-sm line-clamp-2 mb-4">{boat.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex gap-3 text-xs text-cream-500">
@@ -287,7 +285,8 @@ export default function HomePage() {
                 key={b.title}
                 className="bg-navy-800 border border-navy-700 hover:border-gold-500/30 rounded-xl p-6 transition-all duration-300 group"
               >
-                <span className="text-3xl mb-4 block">{b.icon}</span>
+                <p className="text-gold-600 text-xs font-semibold tracking-widest mb-3">{b.number}</p>
+                <div className="w-6 h-px bg-gold-600 mb-4" />
                 <h3 className="font-display text-lg font-semibold text-cream-100 mb-2 group-hover:text-gold-400 transition-colors">
                   {b.title}
                 </h3>
@@ -348,17 +347,14 @@ export default function HomePage() {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="bg-navy-800 border border-navy-700 rounded-2xl p-6 space-y-4"
+                className="bg-navy-800 border border-navy-700 rounded-2xl p-7 flex flex-col justify-between gap-6"
               >
-                <div className="flex gap-0.5">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <span key={i} className="text-gold-500 text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-cream-300 text-sm leading-relaxed italic">"{t.text}"</p>
-                <div>
-                  <p className="text-cream-200 font-medium text-sm">{t.name}</p>
-                  <p className="text-cream-500 text-xs">{t.location}</p>
+                <p className="text-cream-300 text-sm leading-relaxed">
+                  "{t.text}"
+                </p>
+                <div className="border-t border-navy-700 pt-4">
+                  <p className="text-cream-200 font-semibold text-sm">{t.name}</p>
+                  <p className="text-gold-600 text-xs mt-0.5">{t.since}</p>
                 </div>
               </div>
             ))}
@@ -385,10 +381,10 @@ export default function HomePage() {
                 Preencha o formulário e um consultor BOATLUX® entrará em contato
                 para apresentar as opções ideais para seu perfil e orçamento.
               </p>
-              <div className="space-y-3 pt-2">
+              <div className="space-y-2 pt-2">
                 {["Atendimento personalizado", "Resposta em até 1 hora", "Sem compromisso"].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-gold-500 flex-shrink-0" />
+                    <div className="w-4 h-px bg-gold-600 flex-shrink-0" />
                     <span className="text-cream-400 text-sm">{item}</span>
                   </div>
                 ))}

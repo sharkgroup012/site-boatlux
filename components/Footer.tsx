@@ -1,6 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
 
+function PinIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+    </svg>
+  );
+}
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+    </svg>
+  );
+}
+
+function MailIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+    </svg>
+  );
+}
+
 const socialLinks = [
   {
     label: "Instagram",
@@ -56,7 +81,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_white.png"
               alt="BOATLUX®"
               width={160}
               height={54}
@@ -107,8 +132,8 @@ export default function Footer() {
               Contato
             </h3>
             <div className="space-y-3 text-sm text-cream-400">
-              <p className="flex items-start gap-2">
-                <span className="text-gold-500 mt-0.5">📍</span>
+              <p className="flex items-start gap-2.5">
+                <PinIcon className="w-4 h-4 text-gold-600 mt-0.5 flex-shrink-0" />
                 <span>
                   Litoral Norte Paulista
                   <br />
@@ -121,16 +146,16 @@ export default function Footer() {
                 href="https://wa.me/5512996010000"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-gold-400 transition-colors"
+                className="flex items-center gap-2.5 hover:text-gold-400 transition-colors"
               >
-                <span className="text-gold-500">📱</span>
+                <PhoneIcon className="w-4 h-4 text-gold-600 flex-shrink-0" />
                 (12) 99601-0000
               </a>
               <a
                 href="mailto:comercial@boatluxsp.com.br"
-                className="flex items-center gap-2 hover:text-gold-400 transition-colors"
+                className="flex items-center gap-2.5 hover:text-gold-400 transition-colors"
               >
-                <span className="text-gold-500">✉️</span>
+                <MailIcon className="w-4 h-4 text-gold-600 flex-shrink-0" />
                 comercial@boatluxsp.com.br
               </a>
             </div>
@@ -142,7 +167,7 @@ export default function Footer() {
       <div className="border-t border-navy-800 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-cream-500">
           <p>© {new Date().getFullYear()} BOATLUX®. Todos os direitos reservados.</p>
-          <p>Litoral Norte SP — Brasil</p>
+          <p>Litoral Norte SP, Brasil</p>
         </div>
       </div>
     </footer>
