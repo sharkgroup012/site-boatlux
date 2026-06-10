@@ -404,7 +404,7 @@ export default async function HomePage() {
             </div>
             <div className="bg-navy-900 rounded-2xl border border-navy-700 p-8">
               <h3 className="font-display text-xl font-semibold text-cream-100 mb-6">
-                Solicite sua consultoria gratuita
+                Fale com um especialista
               </h3>
               <LeadForm source="homepage" />
             </div>

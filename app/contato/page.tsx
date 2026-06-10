@@ -176,7 +176,7 @@ export default function ContatoPage() {
             {/* Right: form */}
             <div className="bg-navy-800 rounded-2xl border border-navy-700 p-8">
               <h3 className="font-display text-2xl font-semibold text-cream-100 mb-2">
-                Solicite uma consultoria
+                Fale com um especialista
               </h3>
               <p className="text-cream-400 text-sm mb-6">
                 Gratuita e sem compromisso. Respondemos em até 1 hora.
