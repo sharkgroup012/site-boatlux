@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import LeadForm from "@/components/LeadForm";
+import LPLeadForm from "@/components/LPLeadForm";
 
 export const metadata: Metadata = {
   title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
@@ -166,47 +166,37 @@ export default function LPNx340Page() {
           <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Copy */}
-            <div>
-              <span className="inline-block bg-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-gold-500/30 mb-6">
-                Cota Exclusiva · Litoral Norte Paulista
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-center">
+          <span className="inline-block bg-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-gold-500/30 mb-6">
+            Cota Exclusiva · Litoral Norte Paulista
+          </span>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-cream-100 leading-tight mb-4">
+            {BOAT.name}
+          </h1>
+          <p className="text-gold-400 font-display text-xl md:text-2xl italic mb-6">
+            {BOAT.tagline}
+          </p>
+          <p className="text-cream-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            Tenha acesso a uma das embarcações mais sofisticadas do litoral
+            paulista, pagando uma fração do valor, com tudo incluído e zero
+            preocupação.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-cream-500 mb-10">
+            {["Sem compromisso", "Resposta em até 1h", "Processo 100% transparente"].map((t) => (
+              <span key={t} className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0" />
+                {t}
               </span>
-              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-cream-100 leading-tight mb-4">
-                {BOAT.name}
-              </h1>
-              <p className="text-gold-400 font-display text-xl md:text-2xl italic mb-6">
-                {BOAT.tagline}
-              </p>
-              <p className="text-cream-400 text-lg leading-relaxed mb-8 max-w-lg">
-                Tenha acesso a uma das embarcações mais sofisticadas do litoral
-                paulista, pagando uma fração do valor, com tudo incluído e zero
-                preocupação.
-              </p>
-
-              {/* Trust signals */}
-              <div className="flex flex-wrap gap-4 text-sm text-cream-500">
-                {["Sem compromisso", "Resposta em até 1h", "Processo 100% transparente"].map((t) => (
-                  <span key={t} className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0" />
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Form */}
-            <div className="bg-navy-900/90 backdrop-blur-sm border border-navy-700 rounded-2xl p-8 shadow-2xl">
-              <h2 className="font-display text-2xl font-semibold text-cream-100 mb-1">
-                Fale com um especialista
-              </h2>
-              <p className="text-cream-500 text-sm mb-6">
-                Gratuito e sem compromisso. Respondemos em até 1 hora.
-              </p>
-              <LeadForm source="lp-nx340" />
-            </div>
+            ))}
           </div>
+
+          <a
+            href="#formulario"
+            className="inline-block bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-8 py-4 rounded-xl text-sm transition-colors"
+          >
+            Quero saber mais sobre a cota
+          </a>
         </div>
       </section>
 
@@ -466,7 +456,7 @@ export default function LPNx340Page() {
       </section>
 
       {/* ── 9. CTA FINAL ────────────────────────────────────────────────────── */}
-      <section className="py-24 bg-navy-950 relative overflow-hidden">
+      <section id="formulario" className="py-24 bg-navy-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,168,76,0.06)_0%,_transparent_70%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -509,7 +499,7 @@ export default function LPNx340Page() {
               <p className="text-cream-500 text-sm mb-6">
                 Respondemos em até 1 hora nos dias úteis.
               </p>
-              <LeadForm source="lp-nx340-cta" />
+              <LPLeadForm />
             </div>
           </div>
         </div>
