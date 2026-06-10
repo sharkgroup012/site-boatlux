@@ -177,28 +177,38 @@ export default async function EmbarcacaoPage({ params }: Props) {
 
                 <div className="gold-line" />
 
-                <p className="text-cream-400 text-sm leading-relaxed">
-                  Solicite uma proposta personalizada. Nossa equipe apresentará
-                  valores e condições especiais.
-                </p>
+                {boat.quota_price ? (
+                  <div>
+                    <p className="text-cream-500 text-xs uppercase tracking-wide mb-1">
+                      Valor da cota
+                    </p>
+                    <p className="font-display text-3xl font-bold text-gold-400">
+                      {boat.quota_price.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                        maximumFractionDigits: 0,
+                      })}
+                    </p>
+                    {boat.quota_available !== undefined && boat.quota_available > 0 && (
+                      <p className="text-cream-500 text-xs mt-1">
+                        {boat.quota_available} {boat.quota_available === 1 ? "cota disponível" : "cotas disponíveis"}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <p className="text-cream-400 text-sm leading-relaxed">
+                    Consulte-nos sobre valores e disponibilidade desta embarcação.
+                  </p>
+                )}
 
                 <a
-                  href={`https://wa.me/5512996010000?text=Ol%C3%A1%2C+tenho+interesse+na+cota+da+${encodeURIComponent(boat.name)}.+Pode+me+enviar+uma+proposta%3F`}
+                  href={`https://wa.me/5512996010000?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+a+cota+da+${encodeURIComponent(boat.name)}.+Pode+me+passar+mais+detalhes%3F`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-6 py-3.5 rounded-xl text-sm transition-colors"
                 >
                   <WaIcon />
-                  Quero uma proposta
-                </a>
-
-                <a
-                  href={`https://wa.me/5512996010000?text=Ol%C3%A1%2C+gostaria+de+tirar+d%C3%BAvidas+sobre+a+${encodeURIComponent(boat.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full border border-navy-600 text-cream-300 hover:text-gold-400 hover:border-gold-500 font-medium px-6 py-3 rounded-xl text-sm transition-colors"
-                >
-                  Tirar dúvidas
+                  Saber mais sobre esta cota
                 </a>
 
                 <Link

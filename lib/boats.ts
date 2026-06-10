@@ -19,6 +19,8 @@ export type Boat = {
   featured: boolean;
   available: boolean;
   id?: string;
+  quota_price?: number;
+  quota_available?: number;
 };
 
 function mapBoat(b: SupabaseBoat): Boat {
@@ -32,6 +34,8 @@ function mapBoat(b: SupabaseBoat): Boat {
     images: b.images ?? [],
     featured: b.featured ?? false,
     available: b.available ?? true,
+    quota_price: b.quota_price ?? undefined,
+    quota_available: b.quota_available ?? undefined,
     specs: {
       comprimento: b.length ?? undefined,
       motor: b.engine ?? undefined,
