@@ -160,24 +160,26 @@ export default function LPNx340Page() {
             src={BOAT.images.hero}
             alt={BOAT.name}
             fill
-            className="object-cover object-center opacity-40"
+            className="object-cover object-center opacity-75"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/80 to-navy-950/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-transparent" />
+          {/* Overlay uniforme leve para contraste do texto */}
+          <div className="absolute inset-0 bg-navy-950/45" />
+          {/* Gradiente suave só no rodapé para transição de seção */}
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-navy-950 to-transparent" />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-center">
           <span className="inline-block bg-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-gold-500/30 mb-6">
             Cota Exclusiva · Litoral Norte Paulista
           </span>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-cream-100 leading-tight mb-4">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-cream-100 leading-tight mb-4 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
             {BOAT.name}
           </h1>
-          <p className="text-gold-400 font-display text-xl md:text-2xl italic mb-6">
+          <p className="text-gold-400 font-display text-xl md:text-2xl italic mb-6 drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]">
             {BOAT.tagline}
           </p>
-          <p className="text-cream-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-cream-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
             Tenha acesso a uma das embarcações mais sofisticadas do litoral
             paulista, pagando uma fração do valor, com tudo incluído e zero
             preocupação.
