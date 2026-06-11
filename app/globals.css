@@ -26,6 +26,9 @@
   /* Fonts */
   --font-display: var(--font-playfair);
   --font-sans: var(--font-inter);
+
+  /* Custom breakpoints */
+  --breakpoint-nav: 62rem; /* 992px */
 }
 
 :root {

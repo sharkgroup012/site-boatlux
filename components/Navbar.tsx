@@ -67,7 +67,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden nav:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -84,7 +84,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA + admin */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden nav:flex items-center gap-3">
           {isAdmin ? (
             <>
               <Link
@@ -123,7 +123,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
-          className="md:hidden p-2 text-cream-200 hover:text-gold-400 transition-colors"
+          className="nav:hidden p-2 text-cream-200 hover:text-gold-400 transition-colors"
           aria-label="Abrir menu"
         >
           {menuOpen ? <XIcon /> : <MenuIcon />}
@@ -132,7 +132,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-navy-950 border-t border-navy-700 px-4 pb-6 pt-4 space-y-4">
+        <div className="nav:hidden bg-navy-950 border-t border-navy-700 px-4 pb-6 pt-4 space-y-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
