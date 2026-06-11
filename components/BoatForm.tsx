@@ -252,7 +252,7 @@ export default function BoatForm({ initialData, boatId }: Props) {
             <label className={labelClass}>Cotas disponíveis</label>
             <input type="number" value={form.quota_available ?? 0} onChange={(e) => set("quota_available", Number(e.target.value))} className={inputClass} placeholder="4" />
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             <label className="flex items-center gap-2 cursor-pointer">
               <input type="checkbox" checked={form.available ?? true} onChange={(e) => set("available", e.target.checked)} className="accent-yellow-500 w-4 h-4" />
               <span className="text-sm text-gray-300">Disponível para venda</span>
@@ -329,29 +329,29 @@ export default function BoatForm({ initialData, boatId }: Props) {
 
       {error && <p className="text-red-400 text-sm">{error}</p>}
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
         {isEditing && (
           <button
             type="button"
             onClick={handleDelete}
             disabled={deleting}
-            className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 font-medium px-5 py-2.5 rounded-lg text-sm transition-colors disabled:opacity-50"
+            className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 font-medium px-5 py-2.5 rounded-lg text-sm transition-colors disabled:opacity-50 w-full sm:w-auto"
           >
             {deleting ? "Excluindo..." : "Excluir embarcação"}
           </button>
         )}
-        <div className={`flex gap-3 ${!isEditing ? "ml-auto" : ""}`}>
+        <div className={`flex gap-3 ${!isEditing ? "sm:ml-auto" : ""}`}>
           <button
             type="button"
             onClick={() => router.back()}
-            className="border border-gray-700 text-gray-400 hover:text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors"
+            className="flex-1 sm:flex-none border border-gray-700 text-gray-400 hover:text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors"
           >
             Cancelar
           </button>
           <button
             type="submit"
             disabled={saving || uploading}
-            className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-50 text-gray-950 font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors"
+            className="flex-1 sm:flex-none bg-yellow-500 hover:bg-yellow-400 disabled:opacity-50 text-gray-950 font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors"
           >
             {saving ? "Salvando..." : isEditing ? "Salvar alterações" : "Criar embarcação"}
           </button>

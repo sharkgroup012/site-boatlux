@@ -23,10 +23,10 @@ export default async function LeadsPage() {
   return (
     <>
       <AdminNav />
-      <main className="max-w-7xl mx-auto px-6 py-10">
-        <div className="flex items-center justify-between mb-8">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div className="flex items-center justify-between mb-6 sm:mb-8">
           <div>
-            <h1 className="text-2xl font-bold text-white">Leads</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-white">Leads</h1>
             <p className="text-gray-400 text-sm mt-1">
               {leads?.length ?? 0} leads capturados
             </p>
@@ -38,7 +38,8 @@ export default async function LeadsPage() {
         )}
 
         <div className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+          <table className="w-full text-sm min-w-[640px]">
             <thead>
               <tr className="border-b border-gray-800">
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Nome</th>
@@ -100,6 +101,7 @@ export default async function LeadsPage() {
               )}
             </tbody>
           </table>
+          </div>
         </div>
       </main>
     </>

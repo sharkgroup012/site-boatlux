@@ -22,39 +22,48 @@ export default function AdminNav() {
   ];
 
   return (
-    <nav className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center justify-between">
-      <div className="flex items-center gap-8">
-        <Image src="/images/logo_white.png" alt="Boatlux" width={120} height={32} className="h-8 w-auto" />
-        <div className="flex gap-1">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                pathname.startsWith(link.href)
-                  ? "bg-gray-800 text-white"
-                  : "text-gray-400 hover:text-white"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+    <nav className="bg-gray-900 border-b border-gray-800 px-4 sm:px-6 py-3">
+      {/* Row 1: logo + actions */}
+      <div className="flex items-center justify-between">
+        <Image src="/images/logo_white.png" alt="Boatlux" width={120} height={32} className="h-7 sm:h-8 w-auto" />
+        <div className="flex items-center gap-3 sm:gap-4">
+          <Link
+            href="/"
+            target="_blank"
+            className="text-gray-400 hover:text-white text-xs transition-colors hidden sm:inline"
+          >
+            Ver site →
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="text-gray-400 hover:text-red-400 text-xs transition-colors"
+          >
+            Sair
+          </button>
         </div>
       </div>
-      <div className="flex items-center gap-4">
+      {/* Row 2: nav links */}
+      <div className="flex gap-1 mt-3">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
+              pathname.startsWith(link.href)
+                ? "bg-gray-800 text-white"
+                : "text-gray-400 hover:text-white"
+            }`}
+          >
+            {link.label}
+          </Link>
+        ))}
         <Link
           href="/"
           target="_blank"
-          className="text-gray-400 hover:text-white text-xs transition-colors"
+          className="sm:hidden ml-auto px-3 py-1.5 text-xs text-gray-400 hover:text-white transition-colors"
         >
           Ver site →
         </Link>
-        <button
-          onClick={handleLogout}
-          className="text-gray-400 hover:text-red-400 text-xs transition-colors"
-        >
-          Sair
-        </button>
       </div>
     </nav>
   );
