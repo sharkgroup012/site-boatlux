@@ -87,7 +87,7 @@ export default async function HomePage() {
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/carousel-1.jpg"
+          src="/images/hero-section.jpg"
           alt="Lancha Boatlux no Litoral Norte SP"
           fill
           className="object-cover object-center"
