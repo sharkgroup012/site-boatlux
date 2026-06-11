@@ -24,8 +24,8 @@
   --color-cream-500: #9A9080;
 
   /* Fonts */
-  --font-display: var(--font-playfair);
-  --font-sans: var(--font-inter);
+  --font-display: var(--font-montserrat);
+  --font-sans: var(--font-montserrat);
 
   /* Custom breakpoints */
   --breakpoint-nav: 62rem; /* 992px */
