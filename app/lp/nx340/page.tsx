@@ -5,7 +5,7 @@ import LPLeadForm from "@/components/LPLeadForm";
 export const metadata: Metadata = {
   title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
   description:
-    "Tenha acesso a uma das embarcações mais sofisticadas do Litoral Norte Paulista. Cotas disponíveis com tudo incluído. Consulte agora.",
+    "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma",
 };
 
 // ─── Dados da embarcação ─────────────────────────────────────────────────────
