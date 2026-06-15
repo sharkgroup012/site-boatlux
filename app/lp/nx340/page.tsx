@@ -41,10 +41,10 @@ const BOAT = {
 };
 
 const STATS = [
-  { value: "TODO", label: "anos no mercado" },
-  { value: "TODO", label: "cotas comercializadas" },
-  { value: "TODO%", label: "clientes satisfeitos" },
-  { value: "5★", label: "avaliação média" },
+  { value: "+60", label: "embarcações administradas no modelo de propriedade compartilhada" },
+  { value: "+800", label: "cotistas navegando no litoral norte paulista" },
+  { value: "+6", label: "anos no Litoral Norte paulista com + de 450 cotas" },
+  //{ value: "5★", label: "avaliação média" },
 ];
 
 const INCLUDED = [
@@ -172,9 +172,8 @@ export default function LPNx340Page() {
             {BOAT.tagline}
           </p>
           <p className="text-cream-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
-            Tenha acesso a uma das embarcações mais sofisticadas do litoral
-            paulista, pagando uma fração do valor, com tudo incluído e zero
-            preocupação.
+            Acesse uma embarcação de alto padrão sem lidar com burocracia, manutenção ou gestão operacional, 
+            com uma experiência pensada para quem valoriza tempo, conforto e exclusividade. 
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-cream-500 mb-10">
