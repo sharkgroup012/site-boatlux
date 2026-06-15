@@ -44,7 +44,7 @@ const STATS = [
   { value: "+60", label: "embarcações administradas no modelo de propriedade compartilhada" },
   { value: "+800", label: "cotistas navegando no litoral norte paulista" },
   { value: "+6", label: "anos no Litoral Norte paulista com + de 450 cotas" },
-  //{ value: "5★", label: "avaliação média" },
+  { value: "5★", label: "avaliação média" },
 ];
 
 const INCLUDED = [
