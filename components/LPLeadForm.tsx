@@ -38,7 +38,10 @@ export default function LPLeadForm() {
       });
       if (!res.ok) throw new Error();
       setState("success");
-      setForm({ name: "", phone: "", email: "", experiencia: "", conheceCotas: "" });
+      const waText = encodeURIComponent(
+        `Olá! Me chamo ${form.name} e acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.`
+      );
+      window.location.href = `https://wa.me/5512991198268?text=${waText}`;
     } catch {
       setState("error");
     }
