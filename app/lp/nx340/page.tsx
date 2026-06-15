@@ -276,7 +276,7 @@ export default function LPNx340Page() {
             {BOAT.specs.map((s) => (
               <div
                 key={s.label}
-                className="bg-navy-800 border border-navy-700 rounded-xl p-7 text-center"
+                className="bg-navy-800 border border-navy-700 rounded-xl p-7 text-center flex flex-col items-center justify-center"
               >
                 <p className="font-display text-2xl font-bold text-gold-400 mb-2">{s.value}</p>
                 <p className="text-cream-500 text-sm uppercase tracking-wide">{s.label}</p>
