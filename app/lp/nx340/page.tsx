@@ -15,7 +15,7 @@ const BOAT = {
   name: "NX 340 Sport Coupé",
   tagline: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma",
   description:
-    "Acesse uma embarcação de alto padrão sem lidar com burocracia, manutenção ou gestão operacional, com uma experiência pensada para quem valoriza tempo, conforto e exclusividade.",
+    "A NX 340 Sport Coupé combina sofisticação, performance e conforto em uma embarcação pensada para transformar cada saída no mar em uma experiência exclusiva. Com design imponente, espaços amplos e acabamento premium, ela entrega o equilíbrio perfeito entre lazer, elegância e liberdade para aproveitar o melhor de Ubatuba.",
   highlights: [
     { icon: "✦", title: "Motorização Premium", desc: "02 motores MerCruiser V6 250HP a gasolina com propulsão Bravo Three e duplo hélice contra rotantes." },
     { icon: "✦", title: "Tecnologia de Navegação", desc: "Sistema AXIUS com joystick, Skyhook, piloto automático e volante escamoteável para uma navegação mais precisa e sofisticada. " },
@@ -170,9 +170,8 @@ export default function LPNx340Page() {
             {BOAT.tagline}
           </p>
           <p className="text-cream-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.9)]">
-            A NX 340 Sport Coupé combina sofisticação, performance e conforto em uma embarcação pensada para transformar cada saída no mar em uma experiência 
-            exclusiva. Com design imponente, espaços amplos e acabamento premium, ela entrega o equilíbrio perfeito entre lazer, elegância e liberdade para aproveitar 
-            o melhor de Ubatuba. 
+            Acesse uma embarcação de alto padrão sem lidar com burocracia, manutenção ou gestão operacional, 
+            com uma experiência pensada para quem valoriza tempo, conforto e exclusividade. 
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-cream-500 mb-10">
