@@ -32,7 +32,7 @@ const BOAT = {
   ],
   images: {
     // TODO: substituir com imagens reais da NX 340 Sport Coupé
-    hero: "https://images.unsplash.com/photo-1593351415075-3bac9f45c877?auto=format&fit=crop&w=1920&q=80",
+    hero: "/images/nx340/hero.jpg",
     gallery1: "https://images.unsplash.com/photo-1528154291023-a6525fabe5b4?auto=format&fit=crop&w=1200&q=80",
     gallery2: "https://images.unsplash.com/photo-1523496922380-91d5afba98a3?auto=format&fit=crop&w=1200&q=80",
     gallery3: "https://images.unsplash.com/photo-1615646194267-ecf4380ac001?auto=format&fit=crop&w=1200&q=80",
