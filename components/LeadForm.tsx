@@ -50,7 +50,7 @@ export default function LeadForm({ source = "homepage" }: { source?: string }) {
           pelo WhatsApp.
         </p>
         <a
-          href="https://wa.me/5512996010000"
+          href="https://wa.me/5512991198268"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-full text-sm hover:bg-[#20b85a] transition-colors"
@@ -125,8 +125,8 @@ export default function LeadForm({ source = "homepage" }: { source?: string }) {
       {state === "error" && (
         <p className="text-red-400 text-sm">
           Erro ao enviar. Tente pelo WhatsApp:{" "}
-          <a href="https://wa.me/5512996010000" className="underline">
-            (12) 99601-0000
+          <a href="https://wa.me/5512991198268" className="underline">
+            (12) 99119-8268
           </a>
         </p>
       )}

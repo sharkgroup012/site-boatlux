@@ -222,7 +222,7 @@ export default async function EmbarcacaoPage({ params }: Props) {
                 )}
 
                 <a
-                  href={`https://wa.me/5512996010000?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+a+cota+da+${encodeURIComponent(boat.name)}.+Pode+me+passar+mais+detalhes%3F`}
+                  href={`https://wa.me/5512991198268?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+a+cota+da+${encodeURIComponent(boat.name)}.+Pode+me+passar+mais+detalhes%3F`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-6 py-3.5 rounded-xl text-sm transition-colors"

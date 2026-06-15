@@ -56,7 +56,7 @@ export default async function CotasPage() {
             certeza temos a ideal para você.
           </p>
           <a
-            href="https://wa.me/5512996010000?text=Ol%C3%A1%2C+gostaria+de+ver+mais+op%C3%A7%C3%B5es+de+embarca%C3%A7%C3%B5es."
+            href="https://wa.me/5512991198268?text=Ol%C3%A1%2C+gostaria+de+ver+mais+op%C3%A7%C3%B5es+de+embarca%C3%A7%C3%B5es."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-8 py-4 rounded-full text-sm transition-colors"

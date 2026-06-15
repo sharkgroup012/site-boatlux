@@ -143,13 +143,13 @@ export default function Footer() {
                 </span>
               </p>
               <a
-                href="https://wa.me/5512996010000"
+                href="https://wa.me/5512991198268"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-gold-400 transition-colors"
               >
                 <PhoneIcon className="w-4 h-4 text-gold-600 flex-shrink-0" />
-                (12) 99601-0000
+                (12) 99119-8268
               </a>
               <a
                 href="mailto:comercial@boatluxsp.com.br"

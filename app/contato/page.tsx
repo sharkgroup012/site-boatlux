@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: <PhoneIcon />,
     label: "WhatsApp",
-    value: "(12) 99601-0000",
-    href: "https://wa.me/5512996010000",
+    value: "(12) 99119-8268",
+    href: "https://wa.me/5512991198268",
   },
   {
     icon: <MailIcon />,
@@ -144,7 +144,7 @@ export default function ContatoPage() {
                   comercial.
                 </p>
                 <a
-                  href="https://wa.me/5512996010000?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais+sobre+as+cotas."
+                  href="https://wa.me/5512991198268?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais+sobre+as+cotas."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20b85a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"

@@ -181,8 +181,8 @@ export default function LPLeadForm() {
       {state === "error" && (
         <p className="text-red-400 text-sm">
           Erro ao enviar. Tente novamente ou ligue para{" "}
-          <a href="tel:+5512996010000" className="underline">
-            (12) 99601-0000
+          <a href="tel:+5512991198268" className="underline">
+            (12) 99119-8268
           </a>
         </p>
       )}

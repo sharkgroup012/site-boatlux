@@ -100,7 +100,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
 
               <div className="flex items-center justify-between pt-3 border-t border-navy-700">
                 <a
-                  href={`https://wa.me/5512996010000?text=Ol%C3%A1%2C+tenho+interesse+na+${encodeURIComponent(boat.name)}`}
+                  href={`https://wa.me/5512991198268?text=Ol%C3%A1%2C+tenho+interesse+na+${encodeURIComponent(boat.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}

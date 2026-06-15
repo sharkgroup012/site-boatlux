@@ -177,7 +177,7 @@ export default function SobrePage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
-              href="https://wa.me/5512996010000?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais+sobre+as+cotas."
+              href="https://wa.me/5512991198268?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais+sobre+as+cotas."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-8 py-4 rounded-full text-base transition-colors"

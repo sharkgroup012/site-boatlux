@@ -19,10 +19,10 @@ export default function LPLayout({ children }: { children: React.ReactNode }) {
             className="h-10 w-auto object-contain"
           />
           <a
-            href="tel:+5512996010000"
+            href="tel:+5512991198268"
             className="text-cream-300 hover:text-gold-400 text-sm transition-colors"
           >
-            (12) 99601-0000
+            (12) 99119-8268
           </a>
         </div>
       </header>
