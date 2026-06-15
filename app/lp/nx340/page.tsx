@@ -36,7 +36,7 @@ const BOAT = {
     gallery1: "/images/nx340/gallery1.jpg",
     gallery2: "https://images.unsplash.com/photo-1523496922380-91d5afba98a3?auto=format&fit=crop&w=1200&q=80",
     gallery3: "https://images.unsplash.com/photo-1615646194267-ecf4380ac001?auto=format&fit=crop&w=1200&q=80",
-    interior: "https://plus.unsplash.com/premium_photo-1752349202412-45ccd55106dd?auto=format&fit=crop&w=1200&q=80",
+    interior: "/images/nx340/gallery2.jpg",
   },
 };
 
