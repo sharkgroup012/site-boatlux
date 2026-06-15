@@ -219,7 +219,7 @@ export default function LPNx340Page() {
                   src={BOAT.images.gallery1}
                   alt={`${BOAT.name} visão lateral`}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
               {/* Accent image */}
