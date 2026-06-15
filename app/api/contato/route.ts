@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, phone, email, message, source } = body;
+    const { name, phone, email, message, source, experiencia, conhece_cotas } = body;
 
     if (!name || !phone) {
       return NextResponse.json({ error: "Nome e telefone são obrigatórios." }, { status: 400 });
@@ -22,6 +22,8 @@ export async function POST(req: NextRequest) {
         email: email || null,
         message: message || null,
         source: source || "website",
+        experiencia: experiencia || null,
+        conhece_cotas: conhece_cotas || null,
       });
     }
 

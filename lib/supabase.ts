@@ -9,6 +9,8 @@ export type Lead = {
   email?: string;
   message?: string;
   source: string;
+  experiencia?: string;
+  conhece_cotas?: string;
   created_at?: string;
 };
 

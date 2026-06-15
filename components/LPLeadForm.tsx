@@ -24,7 +24,6 @@ export default function LPLeadForm() {
     e.preventDefault();
     setState("loading");
     try {
-      const message = `Experiência náutica: ${form.experiencia} | Conhece cotas: ${form.conheceCotas}`;
       const res = await fetch("/api/contato", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -32,8 +31,9 @@ export default function LPLeadForm() {
           name: form.name,
           phone: form.phone,
           email: form.email,
-          message,
           source: "lp-nx340",
+          experiencia: form.experiencia,
+          conhece_cotas: form.conheceCotas,
         }),
       });
       if (!res.ok) throw new Error();

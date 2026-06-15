@@ -46,6 +46,8 @@ export default async function LeadsPage() {
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Telefone</th>
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Email</th>
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Mensagem</th>
+                <th className="text-left px-6 py-4 text-gray-400 font-medium">Experiência náutica</th>
+                <th className="text-left px-6 py-4 text-gray-400 font-medium">Conhece cotas?</th>
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Origem</th>
                 <th className="text-left px-6 py-4 text-gray-400 font-medium">Data</th>
               </tr>
@@ -82,6 +84,12 @@ export default async function LeadsPage() {
                     <td className="px-6 py-4 text-gray-400 max-w-xs truncate">
                       {lead.message || <span className="text-gray-600">-</span>}
                     </td>
+                    <td className="px-6 py-4 text-gray-400 max-w-[180px]">
+                      {lead.experiencia || <span className="text-gray-600">-</span>}
+                    </td>
+                    <td className="px-6 py-4 text-gray-400 max-w-[160px]">
+                      {lead.conhece_cotas || <span className="text-gray-600">-</span>}
+                    </td>
                     <td className="px-6 py-4">
                       <span className="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded-full">
                         {lead.source}
@@ -94,7 +102,7 @@ export default async function LeadsPage() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={6} className="px-6 py-16 text-center text-gray-500">
+                  <td colSpan={8} className="px-6 py-16 text-center text-gray-500">
                     Nenhum lead ainda.
                   </td>
                 </tr>
