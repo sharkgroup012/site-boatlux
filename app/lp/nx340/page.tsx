@@ -313,8 +313,9 @@ export default function LPNx340Page() {
               </h2>
               <div className="w-12 h-0.5 bg-gold-500 mb-6" />
               <p className="text-cream-400 leading-relaxed mb-8">
-                Na BOATLUX, você paga sua cota e aproveita. Todos os custos
-                operacionais e de manutenção já estão incluídos no valor mensal.
+                Com a Boatlux, você tem o serviço de gestão completa da embarcação, 
+                com a economia do seu tempo na rotina de manutenções, limpeza e organização. 
+                Sua única preocupação é curtir o seu bem.
               </p>
 
               <ul className="space-y-3">
