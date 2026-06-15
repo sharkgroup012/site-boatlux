@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 const BOAT = {
   name: "NX 340 Sport Coupé",
-  tagline: "TODO: tagline principal da embarcação (ex: 'Velocidade, conforto e elegância em alto mar')",
+  tagline: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma",
   description:
-    "TODO: parágrafo de apresentação da embarcação. Descreva o que torna a NX 340 Sport Coupé especial: design, conforto, performance, materiais, etc.",
+    "Acesse uma embarcação de alto padrão sem lidar com burocracia, manutenção ou gestão operacional, com uma experiência pensada para quem valoriza tempo, conforto e exclusividade.",
   highlights: [
     { icon: "✦", title: "TODO: Destaque 1", desc: "Ex: Casco em fibra de carbono com acabamento náutico premium" },
     { icon: "✦", title: "TODO: Destaque 2", desc: "Ex: Salão climatizado com capacidade para X pessoas" },
