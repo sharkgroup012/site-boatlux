@@ -26,7 +26,7 @@ const BOAT = {
     { label: "Comprimento", value: "10,15m" },
     { label: "Capacidade", value: "15 de dia/ 04 à noite" },
     { label: "Motor", value: "Parelha MerCruiser V6 250" },
-    { label: "Potência", value: "TODO: XXX cv" },
+    //{ label: "Potência", value: "TODO: XXX cv" },
     { label: "Tanque Água Doce", value: "150L" },
     { label: "Tanque Combustível", value: "150L" },
   ],
