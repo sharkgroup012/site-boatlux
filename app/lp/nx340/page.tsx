@@ -23,9 +23,9 @@ const BOAT = {
     { icon: "✦", title: "Autonomia e Performance", desc: "Gerador embarcado para maior autonomia e operação eficiente dos sistemas de conforto e conveniência a bordo. " },
   ],
   specs: [
-    { label: "Comprimento", value: "TODO: XX m" },
-    { label: "Capacidade", value: "TODO: XX pessoas" },
-    { label: "Motor", value: "TODO: modelo do motor" },
+    { label: "Comprimento", value: "10,15m" },
+    { label: "Capacidade", value: "15 de dia/ 04 à noite" },
+    { label: "Motor", value: "Parelha MerCruiser V6 250" },
     { label: "Potência", value: "TODO: XXX cv" },
     { label: "Velocidade máx.", value: "TODO: XX nós" },
     { label: "Combustível", value: "TODO: Gasolina / Diesel" },
