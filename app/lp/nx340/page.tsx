@@ -51,11 +51,9 @@ const INCLUDED = [
   "Manutenção preventiva e corretiva",
   "Limpeza completa antes e após cada uso",
   "Seguro total da embarcação",
-  "Cobertura pelo sistema GNU em todo o Brasil",
+  "Acesso exclusivo ao GIU, benefício exclusivo para cotistas Boatlux, para você navegar em mais de 80 marinas nacionais e internacionais",
   "Suporte 24h em casos de emergência",
   "App para agendamentos e reservas",
-  "TODO: benefício específico da NX 340",
-  "TODO: benefício adicional",
 ];
 
 const HOW_IT_WORKS = [
