@@ -274,14 +274,14 @@ export default function LPNx340Page() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {BOAT.specs.map((s) => (
               <div
                 key={s.label}
-                className="bg-navy-800 border border-navy-700 rounded-xl p-5 text-center"
+                className="bg-navy-800 border border-navy-700 rounded-xl p-7 text-center"
               >
-                <p className="font-display text-xl font-bold text-gold-400 mb-1">{s.value}</p>
-                <p className="text-cream-500 text-xs uppercase tracking-wide">{s.label}</p>
+                <p className="font-display text-2xl font-bold text-gold-400 mb-2">{s.value}</p>
+                <p className="text-cream-500 text-sm uppercase tracking-wide">{s.label}</p>
               </div>
             ))}
           </div>
