@@ -35,7 +35,8 @@ const BOAT = {
     hero: "/images/nx340/hero.jpg",
     gallery1: "/images/nx340/gallery1.jpg",
     gallery2: "https://images.unsplash.com/photo-1523496922380-91d5afba98a3?auto=format&fit=crop&w=1200&q=80",
-    gallery3: "https://images.unsplash.com/photo-1615646194267-ecf4380ac001?auto=format&fit=crop&w=1200&q=80",
+    gallery3: "/images/nx340/gallery3.jpg",
+    gallery4: "/images/nx340/gallery4.jpg",
     interior: "/images/nx340/gallery2.jpg",
   },
 };
@@ -286,7 +287,7 @@ export default function LPNx340Page() {
 
           {/* Galeria adicional */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10">
-            {[BOAT.images.gallery2, BOAT.images.gallery3, BOAT.images.gallery1].map((src, i) => (
+            {[BOAT.images.gallery1, BOAT.images.gallery3, BOAT.images.gallery4].map((src, i) => (
               <div key={i} className="relative aspect-video rounded-xl overflow-hidden">
                 <Image
                   src={src}
