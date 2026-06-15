@@ -17,10 +17,10 @@ const BOAT = {
   description:
     "Acesse uma embarcação de alto padrão sem lidar com burocracia, manutenção ou gestão operacional, com uma experiência pensada para quem valoriza tempo, conforto e exclusividade.",
   highlights: [
-    { icon: "✦", title: "TODO: Destaque 1", desc: "Ex: Casco em fibra de carbono com acabamento náutico premium" },
-    { icon: "✦", title: "TODO: Destaque 2", desc: "Ex: Salão climatizado com capacidade para X pessoas" },
-    { icon: "✦", title: "TODO: Destaque 3", desc: "Ex: Motores de alta performance com XX cv" },
-    { icon: "✦", title: "TODO: Destaque 4", desc: "Ex: Sistema de som, churrasqueira e área de banho" },
+    { icon: "✦", title: "Motorização Premium", desc: "02 motores MerCruiser V6 250HP a gasolina com propulsão Bravo Three e duplo hélice contra rotantes." },
+    { icon: "✦", title: "Tecnologia de Navegação", desc: "Sistema AXIUS com joystick, Skyhook, piloto automático e volante escamoteável para uma navegação mais precisa e sofisticada. " },
+    { icon: "✦", title: "Conforto a Bordo", desc: "Ar-condicionado, boiler e ambientes pensados para proporcionar mais conforto em todas as experiências no mar." },
+    { icon: "✦", title: "Autonomia e Performance", desc: "Gerador embarcado para maior autonomia e operação eficiente dos sistemas de conforto e conveniência a bordo. " },
   ],
   specs: [
     { label: "Comprimento", value: "TODO: XX m" },
