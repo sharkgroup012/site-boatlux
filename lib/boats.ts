@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
+import { createSupabaseAdmin } from "./supabase";
 import type { Boat as SupabaseBoat } from "./supabase";
 
 // Legacy type used by existing pages
@@ -46,15 +46,8 @@ function mapBoat(b: SupabaseBoat): Boat {
   };
 }
 
-function getSupabaseClient() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
-}
-
 export async function getAllBoats(): Promise<Boat[]> {
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createSupabaseAdmin()
     .from("boats")
     .select("*")
     .eq("active", true)
@@ -65,7 +58,7 @@ export async function getAllBoats(): Promise<Boat[]> {
 }
 
 export async function getFeaturedBoats(): Promise<Boat[]> {
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createSupabaseAdmin()
     .from("boats")
     .select("*")
     .eq("active", true)
@@ -77,7 +70,7 @@ export async function getFeaturedBoats(): Promise<Boat[]> {
 }
 
 export async function getBoatBySlug(slug: string): Promise<Boat | null> {
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createSupabaseAdmin()
     .from("boats")
     .select("*")
     .eq("slug", slug)
@@ -89,7 +82,7 @@ export async function getBoatBySlug(slug: string): Promise<Boat | null> {
 }
 
 export async function getBoatSlugs(): Promise<string[]> {
-  const { data, error } = await getSupabaseClient()
+  const { data, error } = await createSupabaseAdmin()
     .from("boats")
     .select("slug")
     .eq("active", true);

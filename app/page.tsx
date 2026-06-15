@@ -3,6 +3,8 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { getFeaturedBoats } from "@/lib/boats";
 
+export const dynamic = "force-dynamic";
+
 const stats = [
   { value: "300+", label: "Embarcações", sub: "Lanchas e jet skis de alto padrão" },
   { value: "2.000+", label: "Cotistas", sub: "Voando regularmente pelo litoral" },
@@ -220,7 +222,7 @@ export default async function HomePage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredBoats.map((boat) => (
+            {featuredBoats.filter((b) => b.images.length > 0).map((boat) => (
               <Link
                 key={boat.slug}
                 href={`/embarcacoes/${boat.slug}`}
