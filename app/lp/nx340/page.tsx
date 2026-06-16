@@ -92,7 +92,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Ivan Bedani",
-    text: "Excelente! Estão de parabéns! Barco muito bom, marinheiro Márcio excelente.",
+    text: "Excelente! Estão de parabéns! Barco muito bom, marinheiro Márcio excelente..",
     initials: "Ib",
   },
 ];
