@@ -81,22 +81,19 @@ const HOW_IT_WORKS = [
 
 const TESTIMONIALS = [
   {
-    name: "TODO: Nome do cliente",
-    city: "TODO: Cidade, SP",
-    text: "TODO: depoimento real de cliente. Ex: 'Ter a cota da NX 340 foi a melhor decisão que tomei. Uso todo fim de semana e não me preocupo com nada.'",
-    initials: "TC",
+    name: "Danilo Aniceto",
+    text: "Tenho uma ótima experiência com a Boatlux em São Sebastião, sempre sou bem atendido pela equipe.",
+    initials: "DA",
   },
   {
-    name: "TODO: Nome do cliente",
-    city: "TODO: Cidade, SP",
-    text: "TODO: depoimento real de cliente. Ex: 'A equipe da BOATLUX é incrível. Sempre que precisei de suporte, foram super rápidos e atenciosos.'",
-    initials: "TC",
+    name: "Cmtelvalerio",
+    text: "Várias opções de embarcações, todas muito bem cuidadas, grande equipe, bom suporte, marinheiros de primeira linha, experientes e super atenciosos.",
+    initials: "CM",
   },
   {
-    name: "TODO: Nome do cliente",
-    city: "TODO: Cidade, SP",
-    text: "TODO: depoimento real de cliente. Ex: 'Pensei que seria mais complicado, mas o processo foi simples e transparente do início ao fim.'",
-    initials: "TC",
+    name: "Ivan Bedani",
+    text: "Excelente! Estão de parabéns! Barco muito bom, marinheiro Márcio excelente.",
+    initials: "Ib",
   },
 ];
 
