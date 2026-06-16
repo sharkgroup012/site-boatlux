@@ -403,7 +403,6 @@ export default function LPNx340Page() {
                   </div>
                   <div>
                     <p className="text-cream-200 font-semibold text-sm">{t.name}</p>
-                    <p className="text-cream-600 text-xs">{t.city}</p>
                   </div>
                 </div>
               </div>
