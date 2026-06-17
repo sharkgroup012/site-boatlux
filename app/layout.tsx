@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+import MetaPixel from "@/components/MetaPixel";
 import { BASE_URL, OG_DEFAULT } from "@/lib/constants";
 
 const montserrat = Montserrat({
@@ -65,6 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <MetaPixel />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

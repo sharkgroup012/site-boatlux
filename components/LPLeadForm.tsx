@@ -38,6 +38,11 @@ export default function LPLeadForm() {
       });
       if (!res.ok) throw new Error();
       setState("success");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).fbq("track", "Lead");
+      }
       const waText = encodeURIComponent(
         `Olá! Me chamo ${form.name} e acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.`
       );
