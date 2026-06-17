@@ -46,7 +46,9 @@ export default function LPLeadForm() {
       const waText = encodeURIComponent(
         `Olá! Me chamo ${form.name} e acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.`
       );
-      window.location.href = `https://wa.me/5512991198268?text=${waText}`;
+      setTimeout(() => {
+        window.location.href = `https://wa.me/5512991198268?text=${waText}`;
+      }, 500);
     } catch {
       setState("error");
     }
