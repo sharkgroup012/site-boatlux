@@ -117,7 +117,11 @@ export default function BoatForm({ initialData, boatId }: Props) {
     }
 
     if (err) {
-      setError(err.message);
+      if (err.message.includes("boats_slug_key")) {
+        setError("Já existe uma embarcação com esse slug (URL). Altere o campo Slug para um valor único, ex: adicione um número ou ano.");
+      } else {
+        setError(err.message);
+      }
       setSaving(false);
       return;
     }
