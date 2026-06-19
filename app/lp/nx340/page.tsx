@@ -454,7 +454,7 @@ export default function LPNx340Page() {
             <div>
               <span className="inline-flex items-center gap-2 bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
                 <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />
-                TODO: últimas X cotas disponíveis
+                Últimas cotas disponíveis
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-cream-100 mb-6 leading-tight">
                 Sua cota na{" "}
