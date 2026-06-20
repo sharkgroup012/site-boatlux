@@ -43,6 +43,13 @@ export default function LPLeadForm() {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (window as any).fbq("track", "Lead");
       }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (typeof window !== "undefined") {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (window as any).dataLayer.push({ event: "lead_lp_nx340" });
+      }
       const waText = encodeURIComponent(
         `Olá! Me chamo ${form.name} e acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.`
       );
