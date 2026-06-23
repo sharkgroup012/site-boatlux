@@ -55,6 +55,61 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5LGGXFS4');`,
           }}
         />
+        {/* LocalBusiness Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "BOATLUX®",
+              "description": "A maior empresa de cotas náuticas do Brasil. Lanchas e jet skis em sistema de cotas no Litoral Norte Paulista — Ubatuba, Caraguatatuba, São Sebastião e Ilhabela.",
+              "url": "https://www.boatluxsp.com.br",
+              "telephone": "+5512991198268",
+              "email": "comercial@boatluxsp.com.br",
+              "foundingDate": "2011",
+              "taxID": "39.287.616/0001-20",
+              "logo": "https://www.boatluxsp.com.br/images/logo_white.png",
+              "image": "https://www.boatluxsp.com.br/images/og-default.jpg",
+              "priceRange": "$$$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Manoel Hipólito do Rêgo, 969",
+                "addressLocality": "São Sebastião",
+                "addressRegion": "SP",
+                "postalCode": "11606-100",
+                "addressCountry": "BR"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "19",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Friday",
+                  "opens": "09:00",
+                  "closes": "17:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.instagram.com/boatlux.litoralnortesp",
+                "https://www.facebook.com/boatlux.litoralnortesp",
+                "https://www.youtube.com/@boatluxlitoralnortesp9068",
+                "https://www.linkedin.com/company/boatlux-litoral-norte-sp"
+              ]
+            })
+          }}
+        />
       </head>
       <body className="bg-navy-900 text-cream-200 font-sans antialiased">
         {/* GTM noscript */}
