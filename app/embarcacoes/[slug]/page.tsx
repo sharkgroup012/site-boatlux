@@ -56,8 +56,35 @@ export default async function EmbarcacaoPage({ params }: Props) {
     potencia: "Potência",
   };
 
+  const pageUrl = `${BASE_URL}/embarcacoes/${slug}`;
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": boat.name,
+            "description": boat.description,
+            "image": boat.images[0] ?? undefined,
+            "brand": { "@type": "Brand", "name": "BOATLUX®" },
+            "url": pageUrl,
+            ...(boat.quota_price && {
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "BRL",
+                "price": boat.quota_price,
+                "availability": "https://schema.org/InStock",
+                "url": pageUrl,
+                "seller": { "@type": "Organization", "name": "BOATLUX®" }
+              }
+            })
+          })
+        }}
+      />
+
       {/* Hero image */}
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         <Image
