@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
   description:
     "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma",
+  openGraph: {
+    title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
+    description: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma. Conheça a cota náutica exclusiva da BOATLUX®.",
+    url: "https://www.boatluxsp.com.br/lp/nx340",
+    images: [{ url: "/images/nx340/hero.jpg", width: 1200, height: 630, alt: "NX 340 Sport Coupé | BOATLUX®" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
+    description: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma.",
+    images: ["/images/nx340/hero.jpg"],
+  },
 };
 
 // ─── Dados da embarcação ─────────────────────────────────────────────────────
@@ -113,7 +125,7 @@ const FAQ = [
   },
   {
     q: "Posso levar convidados a bordo?",
-    a: "Sim, e esse é um dos grandes diferenciais da cota. A NX 340 Sport Coupé comporta até 15 pessoas durante o dia — espaço de sobra para reunir família e amigos em alto estilo. Para pernoites, a capacidade é de 4 pessoas, ideal para passeios mais intimistas. Você aproveita o barco do seu jeito, com quem quiser.",
+    a: "Sim, e esse é um dos grandes diferenciais da cota. A NX 340 Sport Coupé comporta até 15 pessoas durante o dia, espaço de sobra para reunir família e amigos em alto estilo. Para pernoites, a capacidade é de 4 pessoas, ideal para passeios mais intimistas. Você aproveita o barco do seu jeito, com quem quiser.",
   },
   {
     q: "Como funciona o processo de compra da cota?",
