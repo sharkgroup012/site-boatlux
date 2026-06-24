@@ -71,6 +71,19 @@ export default async function EmbarcacaoPage({ params }: Props) {
             "image": boat.images[0] ?? undefined,
             "brand": { "@type": "Brand", "name": "BOATLUX®" },
             "url": pageUrl,
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.4",
+              "reviewCount": "19",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+              "author": { "@type": "Person", "name": "Ivan Bedani" },
+              "reviewBody": "Excelente! Estão de parabéns! Barco muito bom, marinheiro Márcio excelente."
+            },
             ...(boat.quota_price && {
               "offers": {
                 "@type": "Offer",
