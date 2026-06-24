@@ -102,17 +102,18 @@ const FAQ = [
     q: "O que é exatamente uma cota náutica?",
     a: "Uma cota náutica é a aquisição de uma fração de uma embarcação. Você tem direito de uso garantido por contrato, sem precisar arcar com todos os custos de propriedade integral: seguro, manutenção, marinheiro e guarda.",
   },
-  {
-    q: "Quantos dias por mês posso usar a embarcação?",
-    a: "TODO: resposta real. Ex: 'Dependendo do modelo de cota escolhido, o uso varia de X a Y dias por mês, distribuídos conforme o calendário compartilhado entre os cotistas.'",
-  },
+  // TODO: confirmar número de dias por mês com equipe comercial antes de publicar
+  // {
+  //   q: "Quantos dias por mês posso usar a embarcação?",
+  //   a: "TODO",
+  // },
   {
     q: "E se a embarcação precisar de manutenção no meu dia reservado?",
     a: "Nesse caso, remarcamos sua data sem qualquer custo adicional. Nossa equipe realiza manutenção preventiva regular justamente para evitar esse tipo de situação.",
   },
   {
     q: "Posso levar convidados a bordo?",
-    a: "TODO: resposta real. Ex: 'Sim. A embarcação comporta até X pessoas. Você pode levar família e amigos normalmente dentro da capacidade máxima.'",
+    a: "Sim, e esse é um dos grandes diferenciais da cota. A NX 340 Sport Coupé comporta até 15 pessoas durante o dia — espaço de sobra para reunir família e amigos em alto estilo. Para pernoites, a capacidade é de 4 pessoas, ideal para passeios mais intimistas. Você aproveita o barco do seu jeito, com quem quiser.",
   },
   {
     q: "Como funciona o processo de compra da cota?",
