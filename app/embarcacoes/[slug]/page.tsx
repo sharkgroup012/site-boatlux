@@ -78,7 +78,22 @@ export default async function EmbarcacaoPage({ params }: Props) {
                 "price": boat.quota_price,
                 "availability": "https://schema.org/InStock",
                 "url": pageUrl,
-                "seller": { "@type": "Organization", "name": "BOATLUX®" }
+                "seller": { "@type": "Organization", "name": "BOATLUX®" },
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "BRL" },
+                  "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "BR" },
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+                    "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+                  }
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "BR",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                }
               }
             })
           })
