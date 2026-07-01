@@ -40,7 +40,7 @@ const BOAT = {
     { label: "Motor", value: "Parelha MerCruiser V6 250" },
     //{ label: "Potência", value: "TODO: XXX cv" },
     { label: "Tanque Água Doce", value: "150L" },
-    { label: "Tanque Combustível", value: "150L" },
+    { label: "Tanque Combustível", value: "450L" },
   ],
   images: {
     // TODO: substituir com imagens reais da NX 340 Sport Coupé
