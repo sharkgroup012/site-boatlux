@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
     description: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma. Conheça a cota náutica exclusiva da BOATLUX®.",
     url: "https://www.boatluxsp.com.br/lp/nx340",
-    images: [{ url: "/images/nx340/hero.jpg", width: 1200, height: 630, alt: "NX 340 Sport Coupé | BOATLUX®" }],
+    images: [{ url: "/images/hero-section.jpg", width: 1200, height: 630, alt: "NX 340 Sport Coupé | BOATLUX®" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "NX 340 Sport Coupé | Cota Náutica Exclusiva | BOATLUX®",
     description: "Sofisticação, liberdade e performance para viver Ubatuba de uma nova forma.",
-    images: ["/images/nx340/hero.jpg"],
+    images: ["/images/hero-section.jpg"],
   },
 };
 
