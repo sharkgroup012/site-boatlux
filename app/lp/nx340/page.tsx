@@ -70,7 +70,6 @@ const INCLUDED = [
   "Limpeza completa antes e após cada uso",
   "Seguro total da embarcação",
   "Acesso exclusivo ao GIU, benefício exclusivo para cotistas Boatlux, para você navegar em mais de 80 marinas nacionais e internacionais",
-  "Suporte 24h em casos de emergência",
   "App para agendamentos e reservas",
 ];
 
