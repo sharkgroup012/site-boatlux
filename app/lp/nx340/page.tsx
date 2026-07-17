@@ -52,6 +52,12 @@ const BOAT = {
   },
 };
 
+const PRICE = {
+  from: "R$ 240.000",
+  to: "R$ 204.000",
+  condition: "à vista",
+};
+
 const STATS = [
   { value: "+60", label: "embarcações administradas no modelo de propriedade compartilhada" },
   { value: "+800", label: "cotistas navegando no litoral norte paulista" },
@@ -454,6 +460,42 @@ export default function LPNx340Page() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── 8.5 INVESTIMENTO ─────────────────────────────────────────────────── */}
+      <section className="py-24 bg-navy-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gold-500 text-xs font-semibold uppercase tracking-widest mb-3">
+            Investimento
+          </p>
+          <h2 className="font-display text-4xl font-bold text-cream-100 mb-6">
+            Sua cota na {BOAT.name}
+          </h2>
+          <div className="w-12 h-0.5 bg-gold-500 mx-auto mb-10" />
+
+          <div className="bg-navy-800 border border-navy-700 rounded-2xl px-10 py-8 inline-block">
+            <p className="text-cream-500 text-lg line-through mb-1">{PRICE.from}</p>
+            <p className="font-display text-5xl font-bold text-gold-400 mb-2">
+              {PRICE.to}
+            </p>
+            <p className="text-cream-400 text-sm uppercase tracking-wide">
+              {PRICE.condition}
+            </p>
+          </div>
+
+          <p className="text-cream-400 leading-relaxed mt-8 max-w-xl mx-auto">
+            Condição especial para pagamento à vista. Fale com nossa equipe e
+            garanta sua cota na {BOAT.name} com o melhor investimento em
+            qualidade de vida no Litoral Norte paulista.
+          </p>
+
+          <a
+            href="#formulario"
+            className="inline-block mt-8 bg-gold-500 hover:bg-gold-400 text-navy-950 font-semibold px-8 py-4 rounded-xl text-sm transition-colors"
+          >
+            Quero garantir minha cota
+          </a>
         </div>
       </section>
 

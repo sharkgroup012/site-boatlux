@@ -12,6 +12,7 @@ export default function LPLeadForm() {
     email: "",
     experiencia: "",
     conheceCotas: "",
+    prazoDecisao: "",
   });
 
   const handleChange = (
@@ -34,6 +35,7 @@ export default function LPLeadForm() {
           source: "lp-nx340",
           experiencia: form.experiencia,
           conhece_cotas: form.conheceCotas,
+          prazo_decisao: form.prazoDecisao,
         }),
       });
       if (!res.ok) throw new Error();
@@ -189,6 +191,39 @@ export default function LPLeadForm() {
             </option>
             <option value="Conheço muito" className="bg-navy-800">
               Conheço muito
+            </option>
+          </select>
+          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gold-500 text-xs">▼</span>
+        </div>
+      </div>
+
+      {/* Select 3 */}
+      <div>
+        <label className="block text-xs text-cream-400 uppercase tracking-wide mb-1.5">
+          Quando pretende tomar a decisão? *
+        </label>
+        <div className="relative">
+          <select
+            name="prazoDecisao"
+            required
+            value={form.prazoDecisao}
+            onChange={handleChange}
+            className={selectClass}
+          >
+            <option value="" disabled className={emptyOptionClass}>
+              Selecione uma opção
+            </option>
+            <option value="Ainda estou pesquisando, sem prazo definido" className="bg-navy-800">
+              Ainda estou pesquisando, sem prazo definido
+            </option>
+            <option value="Nos próximos 3 meses" className="bg-navy-800">
+              Nos próximos 3 meses
+            </option>
+            <option value="Nos próximos 30 dias" className="bg-navy-800">
+              Nos próximos 30 dias
+            </option>
+            <option value="Já decidi, só preciso escolher a embarcação" className="bg-navy-800">
+              Já decidi, só preciso escolher a embarcação
             </option>
           </select>
           <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gold-500 text-xs">▼</span>
