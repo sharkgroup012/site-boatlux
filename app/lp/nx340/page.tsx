@@ -191,7 +191,7 @@ export default function LPNx340Page() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm text-cream-500 mb-10">
-            {["Sem compromisso", "Resposta em até 1h", "Processo 100% transparente"].map((t) => (
+            {["Resposta em até 1h", "Processo 100% transparente"].map((t) => (
               <span key={t} className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold-500 flex-shrink-0" />
                 {t}
