@@ -53,7 +53,13 @@ export default function LPLeadForm() {
         (window as any).dataLayer.push({ event: "lead_lp_nx340" });
       }
       const waText = encodeURIComponent(
-        `Olá! Me chamo ${form.name} e acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.`
+        `Olá! Acabei de preencher o formulário sobre a NX 340. Gostaria de saber mais sobre a cota.\n\n` +
+          `Nome: ${form.name}\n` +
+          `Telefone: ${form.phone}\n` +
+          `E-mail: ${form.email}\n` +
+          `Experiência náutica: ${form.experiencia}\n` +
+          `Conhece cotas náuticas: ${form.conheceCotas}\n` +
+          `Prazo para decisão: ${form.prazoDecisao}`
       );
       setTimeout(() => {
         window.location.href = `https://wa.me/5512991198268?text=${waText}`;
