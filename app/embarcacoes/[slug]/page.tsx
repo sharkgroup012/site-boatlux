@@ -145,7 +145,7 @@ export default async function EmbarcacaoPage({ params }: Props) {
         <div className="absolute bottom-0 left-0 right-0 px-4 pb-10">
           <div className="max-w-7xl mx-auto">
             <span className="inline-block bg-gold-500/90 text-navy-950 text-xs font-semibold px-3 py-1 rounded-full mb-3 capitalize">
-              {boat.type === "lancha" ? "Lancha" : "Jet Ski"}
+              {boat.type === "lancha" ? "Lancha" : boat.type === "jet" ? "Jet Ski" : "Oportunidade"}
             </span>
             <h1 className="font-display text-4xl md:text-6xl font-bold text-cream-100">
               {boat.name}

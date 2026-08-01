@@ -5,7 +5,7 @@ import type { Boat as SupabaseBoat } from "./supabase";
 export type Boat = {
   slug: string;
   name: string;
-  type: "lancha" | "jet";
+  type: "lancha" | "jet" | "oportunidade";
   location: string;
   specs: {
     comprimento?: string;

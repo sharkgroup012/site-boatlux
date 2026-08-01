@@ -237,7 +237,7 @@ export default async function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent" />
                   <span className="absolute top-3 left-3 bg-gold-500/90 text-navy-950 text-xs font-semibold px-3 py-1 rounded-full capitalize">
-                    {boat.type === "lancha" ? "Lancha" : "Jet Ski"}
+                    {boat.type === "lancha" ? "Lancha" : boat.type === "jet" ? "Jet Ski" : "Oportunidade"}
                   </span>
                 </div>
                 <div className="p-5">

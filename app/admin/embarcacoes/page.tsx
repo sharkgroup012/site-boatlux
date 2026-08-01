@@ -57,9 +57,11 @@ export default async function AdminEmbarcacoesPage() {
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${
                       boat.type === "lancha"
                         ? "bg-blue-500/20 text-blue-300"
-                        : "bg-purple-500/20 text-purple-300"
+                        : boat.type === "jet"
+                        ? "bg-purple-500/20 text-purple-300"
+                        : "bg-amber-500/20 text-amber-300"
                     }`}>
-                      {boat.type === "lancha" ? "Lancha" : "Jet Ski"}
+                      {boat.type === "lancha" ? "Lancha" : boat.type === "jet" ? "Jet Ski" : "Oportunidade"}
                     </span>
                     {!boat.active && (
                       <span className="text-xs px-2 py-0.5 rounded-full bg-red-500/20 text-red-300">

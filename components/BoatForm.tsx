@@ -188,6 +188,7 @@ export default function BoatForm({ initialData, boatId }: Props) {
             >
               <option value="lancha">Lancha</option>
               <option value="jet">Jet Ski</option>
+              <option value="oportunidade">Oportunidade</option>
             </select>
           </div>
           <div>

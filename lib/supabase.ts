@@ -18,7 +18,7 @@ export type Boat = {
   id?: string;
   name: string;
   slug: string;
-  type: "lancha" | "jet";
+  type: "lancha" | "jet" | "oportunidade";
   brand?: string;
   model?: string;
   year?: number;

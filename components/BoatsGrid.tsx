@@ -14,8 +14,11 @@ function WaIcon() {
 }
 
 export default function BoatsGrid({ boats }: { boats: Boat[] }) {
-  const [filter, setFilter] = useState<"all" | "lancha" | "jet">("all");
-  const filtered = filter === "all" ? boats : boats.filter((b) => b.type === filter);
+  const [filter, setFilter] = useState<"all" | "lancha" | "jet" | "oportunidade">("all");
+  const filtered =
+    filter === "all"
+      ? boats.filter((b) => b.type !== "oportunidade")
+      : boats.filter((b) => b.type === filter);
 
   return (
     <>
@@ -26,6 +29,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
             { key: "all", label: "Todas" },
             { key: "lancha", label: "Lanchas" },
             { key: "jet", label: "Jet Skis" },
+            { key: "oportunidade", label: "Oportunidades" },
           ] as const
         ).map((tab) => (
           <button
@@ -60,7 +64,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent" />
               <div className="absolute top-3 left-3 flex gap-2">
                 <span className="bg-gold-500/90 text-navy-950 text-xs font-semibold px-3 py-1 rounded-full capitalize">
-                  {boat.type === "lancha" ? "Lancha" : "Jet Ski"}
+                  {boat.type === "lancha" ? "Lancha" : boat.type === "jet" ? "Jet Ski" : "Oportunidade"}
                 </span>
                 {boat.available && (
                   <span className="bg-emerald-500/90 text-white text-xs font-semibold px-3 py-1 rounded-full">
