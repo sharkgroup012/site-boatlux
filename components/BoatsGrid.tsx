@@ -116,16 +116,22 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
               </div>
 
               <div className="flex items-center justify-between pt-3 border-t border-navy-700">
-                <a
-                  href={`https://wa.me/5512991198268?text=Ol%C3%A1%2C+tenho+interesse+na+${encodeURIComponent(boat.name)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(
+                      `https://wa.me/5512991198268?text=Ol%C3%A1%2C+tenho+interesse+na+${encodeURIComponent(boat.name)}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
                   className="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20b85a] text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors"
                 >
                   <WaIcon />
                   Tenho interesse
-                </a>
+                </button>
                 <span className="text-gold-500 text-xs font-medium group-hover:translate-x-1 transition-transform inline-block">
                   Detalhes →
                 </span>
