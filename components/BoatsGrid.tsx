@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Boat } from "@/lib/boats";
 
+const OPPORTUNITY_TAGS = {
+  pre_venda: { label: "Pré-Venda", className: "bg-amber-500/95 text-navy-950" },
+  condicao_especial: { label: "Condição Especial", className: "bg-violet-500/95 text-white" },
+  ultima_cota: { label: "Última Cota", className: "bg-red-500/95 text-white" },
+} as const;
+
 function WaIcon() {
   return (
     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
@@ -72,6 +78,13 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
                   </span>
                 )}
               </div>
+              {boat.type === "oportunidade" && boat.opportunityTag && (
+                <div
+                  className={`absolute bottom-0 left-0 right-0 text-center text-xs font-semibold py-1.5 ${OPPORTUNITY_TAGS[boat.opportunityTag].className}`}
+                >
+                  {OPPORTUNITY_TAGS[boat.opportunityTag].label}
+                </div>
+              )}
             </div>
 
             <div className="p-6">

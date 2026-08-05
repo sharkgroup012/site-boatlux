@@ -37,6 +37,7 @@ export default function BoatForm({ initialData, boatId }: Props) {
     power: "",
     max_speed: "",
     fuel: "gasolina",
+    opportunity_tag: null,
     quota_price: undefined,
     quota_available: 0,
     location: "",
@@ -191,6 +192,21 @@ export default function BoatForm({ initialData, boatId }: Props) {
               <option value="oportunidade">Oportunidade</option>
             </select>
           </div>
+          {form.type === "oportunidade" && (
+            <div>
+              <label className={labelClass}>Tag de oportunidade</label>
+              <select
+                value={form.opportunity_tag ?? ""}
+                onChange={(e) => set("opportunity_tag", e.target.value || null)}
+                className={inputClass}
+              >
+                <option value="">Nenhuma</option>
+                <option value="pre_venda">Pré-Venda</option>
+                <option value="condicao_especial">Condição Especial</option>
+                <option value="ultima_cota">Última Cota</option>
+              </select>
+            </div>
+          )}
           <div>
             <label className={labelClass}>Marca</label>
             <input type="text" value={form.brand ?? ""} onChange={(e) => set("brand", e.target.value)} className={inputClass} placeholder="Ex: Focker" />

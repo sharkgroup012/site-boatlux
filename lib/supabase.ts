@@ -19,6 +19,7 @@ export type Boat = {
   name: string;
   slug: string;
   type: "lancha" | "jet" | "oportunidade";
+  opportunity_tag?: "pre_venda" | "condicao_especial" | "ultima_cota" | null;
   brand?: string;
   model?: string;
   year?: number;

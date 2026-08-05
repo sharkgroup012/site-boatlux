@@ -6,6 +6,7 @@ export type Boat = {
   slug: string;
   name: string;
   type: "lancha" | "jet" | "oportunidade";
+  opportunityTag?: "pre_venda" | "condicao_especial" | "ultima_cota" | null;
   location: string;
   specs: {
     comprimento?: string;
@@ -29,6 +30,7 @@ function mapBoat(b: SupabaseBoat): Boat {
     slug: b.slug,
     name: b.name,
     type: b.type,
+    opportunityTag: b.opportunity_tag ?? null,
     location: b.location ?? "",
     description: b.description ?? "",
     images: b.images ?? [],
