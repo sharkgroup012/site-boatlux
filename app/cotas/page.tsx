@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { getAllBoats } from "@/lib/boats";
 import BoatsGrid from "@/components/BoatsGrid";
 
@@ -41,7 +42,9 @@ export default async function CotasPage() {
       {/* Filter + Grid */}
       <section className="pb-28 bg-navy-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BoatsGrid boats={boats} />
+          <Suspense fallback={null}>
+            <BoatsGrid boats={boats} />
+          </Suspense>
         </div>
       </section>
 

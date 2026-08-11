@@ -3,7 +3,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import type { Boat } from "@/lib/boats";
+
+type FilterKey = "all" | "lancha" | "jet" | "oportunidade";
+
+const TAB_PARAM_MAP: Record<string, FilterKey> = {
+  todas: "all",
+  lanchas: "lancha",
+  "jet-skis": "jet",
+  oportunidades: "oportunidade",
+};
 
 const OPPORTUNITY_TAGS = {
   pre_venda: { label: "Pré-Venda", className: "bg-amber-500/95 text-navy-950" },
@@ -20,7 +30,9 @@ function WaIcon() {
 }
 
 export default function BoatsGrid({ boats }: { boats: Boat[] }) {
-  const [filter, setFilter] = useState<"all" | "lancha" | "jet" | "oportunidade">("all");
+  const searchParams = useSearchParams();
+  const initialFilter = TAB_PARAM_MAP[searchParams.get("tab") ?? ""] ?? "all";
+  const [filter, setFilter] = useState<FilterKey>(initialFilter);
   const filtered =
     filter === "all"
       ? boats.filter((b) => b.type !== "oportunidade")
