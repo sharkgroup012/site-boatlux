@@ -1,14 +1,19 @@
 "use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const PIXEL_ID = "1036080068178830";
 
 export default function MetaPixel() {
   const pathname = usePathname();
+  // O snippet abaixo já dispara o PageView do primeiro carregamento.
+  // Este efeito só dispara quando a rota muda depois disso (navegação interna).
+  const lastPath = useRef(pathname);
 
   useEffect(() => {
+    if (lastPath.current === pathname) return;
+    lastPath.current = pathname;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (typeof window !== "undefined" && (window as any).fbq) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any

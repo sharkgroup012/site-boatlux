@@ -19,6 +19,7 @@ export default function AdminNav() {
   const links = [
     { href: "/admin/leads", label: "Leads" },
     { href: "/admin/embarcacoes", label: "Embarcações" },
+    { href: "/admin/placar", label: "Placar" },
   ];
 
   return (
