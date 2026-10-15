@@ -37,11 +37,15 @@ export default function DvWhatsAppButton({
 
   function handleClick() {
     try {
-      window.fbq?.("track", "Contact", {
-        content_name: "dono-do-verao",
-        ref_code: ref,
-        local,
-      });
+      // Só o Pixel do Dono do Verão; sem a variável, não dispara nada.
+      const pixelId = process.env.NEXT_PUBLIC_DV_PIXEL_ID;
+      if (pixelId) {
+        window.fbq?.("trackSingle", pixelId, "Contact", {
+          content_name: "dono-do-verao",
+          ref_code: ref,
+          local,
+        });
+      }
     } catch {
       // Falha do Pixel nunca deve impedir o contato.
     }
