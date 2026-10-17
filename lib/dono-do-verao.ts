@@ -1,10 +1,8 @@
 // Configuração e regras da página /dono-do-verao e do admin "Placar".
 
-// Número do WhatsApp da campanha (formato internacional, só dígitos).
-// ÚNICO lugar para trocar: variável NEXT_PUBLIC_DV_WHATSAPP_NUMBER na Vercel
-// (ou o valor padrão abaixo). Provisório: o número atual do site.
-export const DV_WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_DV_WHATSAPP_NUMBER || "5512991198268";
+// Número exclusivo do SDR para a campanha (formato internacional, só dígitos).
+// ÚNICO lugar para trocar. Não depende de variável de ambiente.
+export const DV_WHATSAPP_NUMBER = "5512996010000";
 
 export const DV_DEFAULT_REF = "DV-SITE";
 
