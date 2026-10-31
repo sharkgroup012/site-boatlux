@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BASE_URL, OG_DEFAULT } from "@/lib/constants";
+import { BASE_URL } from "@/lib/constants";
+
+const OG_IMAGE = {
+  url: `${BASE_URL}/images/og-dono-do-verao.jpg`,
+  width: 700,
+  height: 481,
+  alt: "Moto aquática Sea-Doo — Dono do Verão BOATLUX®",
+};
 
 export const metadata: Metadata = {
   title: "Dono do Verão | BOATLUX®",
@@ -15,7 +22,14 @@ export const metadata: Metadata = {
     siteName: "BOATLUX®",
     type: "website",
     locale: "pt_BR",
-    images: [OG_DEFAULT],
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dono do Verão | BOATLUX®",
+    description:
+      "Veja as cotas restantes por grupo, valores e condições. Curso de Motonauta incluído.",
+    images: [OG_IMAGE.url],
   },
 };
 
