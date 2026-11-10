@@ -41,7 +41,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
   return (
     <>
       {/* Filter tabs */}
-      <div className="flex items-center justify-center gap-3 mb-12 pt-4">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 pt-4">
         {(
           [
             { key: "all", label: "Todas" },
@@ -53,7 +53,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
           <button
             key={tab.key}
             onClick={() => setFilter(tab.key)}
-            className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-4 sm:px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
               filter === tab.key
                 ? "bg-gold-500 text-navy-950"
                 : "border border-navy-600 text-cream-400 hover:border-gold-500 hover:text-gold-400"
