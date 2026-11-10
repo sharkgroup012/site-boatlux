@@ -23,7 +23,7 @@ export default async function CotasPage() {
   const blackNovember = tema === "black-november";
 
   return (
-    <div data-tema={tema}>
+    <div data-tema={tema} className="overflow-x-clip">
       {blackNovember && (
         <div className="bn-faixa pt-[72px]" role="note" aria-label="Black November · Condições especiais até 30 de novembro">
           <div className="bn-marquee h-14 sm:h-16 flex items-center overflow-hidden text-navy-950 font-bold uppercase tracking-widest text-base sm:text-xl">
