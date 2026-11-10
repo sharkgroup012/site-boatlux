@@ -20,6 +20,7 @@ export default function AdminNav() {
     { href: "/admin/leads", label: "Leads" },
     { href: "/admin/embarcacoes", label: "Embarcações" },
     { href: "/admin/placar", label: "Placar" },
+    { href: "/admin/tema", label: "Tema" },
   ];
 
   return (

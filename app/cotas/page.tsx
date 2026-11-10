@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { getAllBoats } from "@/lib/boats";
 import BoatsGrid from "@/components/BoatsGrid";
+import { getCotasTema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Cotas Disponíveis | BOATLUX® | Lanchas e Jet Skis",
@@ -18,23 +19,31 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function CotasPage() {
-  const boats = await getAllBoats();
+  const [boats, tema] = await Promise.all([getAllBoats(), getCotasTema()]);
+  const blackNovember = tema === "black-november";
 
   return (
-    <>
+    <div data-tema={tema}>
+      {blackNovember && (
+        <div className="bn-faixa pt-24 pb-2.5 text-center text-navy-950 text-xs sm:text-sm font-bold uppercase tracking-widest">
+          Black November · Condições especiais até 30 de novembro
+        </div>
+      )}
+
       {/* Page Hero */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className={`relative pb-20 overflow-hidden ${blackNovember ? "pt-16" : "pt-32"}`}>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(201,168,76,0.08)_0%,_transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gold-500 text-xs font-semibold uppercase tracking-widest mb-4">
-            Frota exclusiva
+            {blackNovember ? "Black November" : "Frota exclusiva"}
           </p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-cream-100 mb-6">
             Cotas Disponíveis
           </h1>
           <p className="text-cream-400 text-lg max-w-2xl mx-auto">
-            Escolha entre lanchas e jet skis de alto padrão. Cada embarcação
-            cuidadosamente mantida para garantir a melhor experiência.
+            {blackNovember
+              ? "Condições especiais até 30 de novembro. Garanta sua cota em lanchas e jet skis de alto padrão."
+              : "Escolha entre lanchas e jet skis de alto padrão. Cada embarcação cuidadosamente mantida para garantir a melhor experiência."}
           </p>
         </div>
       </section>
@@ -68,6 +77,6 @@ export default async function CotasPage() {
           </a>
         </div>
       </section>
-    </>
+    </div>
   );
 }

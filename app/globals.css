@@ -58,6 +58,23 @@ body {
   background: linear-gradient(90deg, #C9A84C, #E8C96A);
 }
 
+/* Tema Black November (página /cotas): redefine os tokens dentro do wrapper. */
+[data-tema="black-november"] {
+  --color-navy-950: #000000;
+  --color-navy-900: #050505;
+  --color-navy-800: #0b0b0b;
+  --color-navy-700: #1c1a14;
+  --color-navy-600: #2e2a1c;
+  --color-navy-500: #453d24;
+  --color-gold-400: #F2D98A;
+  --color-gold-500: #E0B84F;
+  background: #000;
+}
+
+.bn-faixa {
+  background: linear-gradient(90deg, #8A6E22, #E8C96A 50%, #8A6E22);
+}
+
 /* Subtle gold glow for cards */
 .card-glow:hover {
   box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
