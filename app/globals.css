@@ -79,6 +79,8 @@ body {
 .bn-marquee-track {
   display: flex;
   width: max-content;
+  flex-shrink: 0;
+  will-change: transform;
   animation: bn-marquee 40s linear infinite;
 }
 .bn-marquee-group {
@@ -90,9 +92,10 @@ body {
     transform: translateX(-50%);
   }
 }
+/* Movimento reduzido: não desliga, só desacelera (muitos PCs Windows vêm com animações desativadas). */
 @media (prefers-reduced-motion: reduce) {
   .bn-marquee-track {
-    animation: none;
+    animation-duration: 120s;
   }
 }
 
