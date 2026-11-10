@@ -25,8 +25,20 @@ export default async function CotasPage() {
   return (
     <div data-tema={tema}>
       {blackNovember && (
-        <div className="bn-faixa pt-24 pb-2.5 text-center text-navy-950 text-xs sm:text-sm font-bold uppercase tracking-widest">
-          Black November · Condições especiais até 30 de novembro
+        <div className="bn-faixa pt-[72px]" role="note" aria-label="Black November · Condições especiais até 30 de novembro">
+          <div className="bn-marquee h-14 sm:h-16 flex items-center overflow-hidden text-navy-950 font-bold uppercase tracking-widest text-base sm:text-xl">
+            <div className="bn-marquee-track">
+              {[0, 1].map((g) => (
+                <div key={g} className="bn-marquee-group" aria-hidden="true">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <span key={i} className="whitespace-nowrap px-8">
+                      Black November <span className="px-4">✦</span> Condições especiais até 30 de novembro <span className="pl-8">✦</span>
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
 

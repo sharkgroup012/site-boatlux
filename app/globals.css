@@ -75,6 +75,27 @@ body {
   background: linear-gradient(90deg, #8A6E22, #E8C96A 50%, #8A6E22);
 }
 
+/* Faixa de texto deslizando para a esquerda (marquee). Dois grupos idênticos: -50% fecha o loop. */
+.bn-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: bn-marquee 40s linear infinite;
+}
+.bn-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+}
+@keyframes bn-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bn-marquee-track {
+    animation: none;
+  }
+}
+
 /* Subtle gold glow for cards */
 .card-glow:hover {
   box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
