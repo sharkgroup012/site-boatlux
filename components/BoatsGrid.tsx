@@ -29,9 +29,21 @@ function WaIcon() {
   );
 }
 
+// Abas exibidas. Para reexibir Todas/Lanchas/Jet Skis, basta adicionar as chaves aqui.
+const VISIBLE_TABS: FilterKey[] = ["oportunidade"];
+
+const ALL_TABS = [
+  { key: "all", label: "Todas" },
+  { key: "lancha", label: "Lanchas" },
+  { key: "jet", label: "Jet Skis" },
+  { key: "oportunidade", label: "Oportunidades" },
+] as const;
+
 export default function BoatsGrid({ boats }: { boats: Boat[] }) {
   const searchParams = useSearchParams();
-  const initialFilter = TAB_PARAM_MAP[searchParams.get("tab") ?? ""] ?? "all";
+  const fromParam = TAB_PARAM_MAP[searchParams.get("tab") ?? ""];
+  const initialFilter =
+    fromParam && VISIBLE_TABS.includes(fromParam) ? fromParam : VISIBLE_TABS[0];
   const [filter, setFilter] = useState<FilterKey>(initialFilter);
   const filtered =
     filter === "all"
@@ -42,14 +54,7 @@ export default function BoatsGrid({ boats }: { boats: Boat[] }) {
     <>
       {/* Filter tabs */}
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 pt-4">
-        {(
-          [
-            { key: "all", label: "Todas" },
-            { key: "lancha", label: "Lanchas" },
-            { key: "jet", label: "Jet Skis" },
-            { key: "oportunidade", label: "Oportunidades" },
-          ] as const
-        ).map((tab) => (
+        {ALL_TABS.filter((tab) => VISIBLE_TABS.includes(tab.key)).map((tab) => (
           <button
             key={tab.key}
             onClick={() => setFilter(tab.key)}
